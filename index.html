@@ -142,8 +142,21 @@ nav.days a[data-city] small{color:var(--city)}
 nav.days a.today{background:var(--city,var(--blue));border-color:var(--city,var(--blue))}
 
 .block{margin-top:34px}
+.block.fold{margin-top:0}
+details.blkdet{border-bottom:1px solid var(--line)}
+#soldi details.blkdet{margin-top:10px;border-top:1px solid var(--line)}
+details.blkdet > summary{list-style:none;cursor:pointer;padding-block:16px;-webkit-tap-highlight-color:transparent}
+details.blkdet > summary::-webkit-details-marker{display:none}
+details.blkdet > summary:focus-visible{outline:2px solid var(--blue);outline-offset:4px;border-radius:12px}
+.blkhead{display:flex;justify-content:space-between;align-items:center;gap:14px}
+.blkhead > div{min-width:0}
+.blkhead p{margin:3px 0 0;color:var(--muted);font-size:14px}
+.blkbody{padding-bottom:22px}
+.blkbody > p{margin:0;color:var(--muted);font-size:15px}
+.blkbody > .card:first-child{margin-top:0}
 .block h2{font-family:var(--display);font-weight:400;font-size:26px;margin:0 0 4px}
 .block > p{margin:0;color:var(--muted);font-size:15px}
+.block .blkhead h2{font-size:22px;line-height:1.15;margin:0;text-wrap:balance}
 .check{display:flex;gap:12px;align-items:flex-start;padding:12px 16px}
 .check + .check{border-top:1px solid var(--line)}
 .check input{width:22px;height:22px;margin:1px 0 0;accent-color:var(--blue);flex:0 0 auto}
@@ -171,6 +184,16 @@ nav.days a.today{background:var(--city,var(--blue));border-color:var(--city,var(
 .btn:disabled{opacity:.6}
 .tkbtn{padding:8px 16px;font-size:15px}
 .dlmsg{font-size:14px;color:var(--muted)}
+.tkjump{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:14px;padding:14px 16px;border-radius:16px;background:var(--saffron-bg);color:var(--ink);text-decoration:none}
+.tkjump > span:first-child{min-width:0}
+.tkjump b{display:block;font-size:17px}
+.tkjump small{display:block;font-size:14px;color:var(--muted);margin-top:2px}
+.tkjump .go{flex:0 0 auto;background:var(--saffron);color:var(--surface);font-weight:700;font-size:15px;border-radius:999px;padding:7px 14px}
+.tkjump:focus-visible{outline:2px solid var(--saffron);outline-offset:2px}
+.tkinline{display:inline-block;margin-top:10px}
+nav.days a.tk{border-color:var(--saffron)}
+nav.days a.tk small,nav.days a.tk span{color:var(--saffron)}
+nav.days a.tk span{font-size:15px}
 .dlmsg:empty{display:none}
 .conv{padding:14px 16px;display:grid;gap:12px}
 .conv .row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
@@ -557,9 +580,12 @@ a:focus-visible,input:focus-visible{outline:2px solid var(--blue);outline-offset
   </details>
 </section>
 
+<div class="daybar"><h2>Informazioni utili</h2><button type="button" class="linkbtn" id="toggle-rest" hidden>Apri tutti</button></div>
 <!-- HOTEL -->
-<section class="block" id="hotel" style="scroll-margin-top:72px">
-  <h2>Hotel</h2>
+<section class="block fold" id="hotel" style="scroll-margin-top:72px">
+  <details class="blkdet">
+  <summary><div class="blkhead"><div><h2>Hotel</h2><p>3 riad · indirizzi, conferme e PIN</p></div><span class="chev" aria-hidden="true"></span></div></summary>
+  <div class="blkbody">
   <p>I codici delle prenotazioni sono nella pagina privata su Claude.</p>
   <div class="card hotel">
     <div class="lbl">Hotel · 4 notti, 3 → 7 ottobre</div>
@@ -577,11 +603,15 @@ a:focus-visible,input:focus-visible{outline:2px solid var(--blue);outline-offset
     <a class="name place" href="https://www.google.com/maps/search/?api=1&query=Dar+Dadicilef+Chefchaouen">Dar Dadicilef</a>
     
   </div>
+  </div>
+  </details>
 </section>
 
 <!-- LISTA GABRIELLA -->
-<section class="block" id="gabriella" style="scroll-margin-top:72px">
-  <h2>La lista di Gabriella</h2>
+<section class="block fold" id="gabriella" style="scroll-margin-top:72px">
+  <details class="blkdet">
+  <summary><div class="blkhead"><div><h2>La lista di Gabriella</h2><p>Rooftop, ristoranti, shopping e spa a Marrakech</p></div><span class="chev" aria-hidden="true"></span></div></summary>
+  <div class="blkbody">
   <p>Posti presi da Instagram e Pinterest, tutti verificati. Le distanze sono dal Riad Alia. Quelli già nel programma non sono ripetuti qui.</p>
   <div class="card">
     <div class="part">
@@ -626,11 +656,15 @@ a:focus-visible,input:focus-visible{outline:2px solid var(--blue);outline-offset
       <div class="item"><div><a class="t place" href="https://www.google.com/maps/search/?api=1&query=Royal+Mansour+Spa+Marrakech">Spa Royal Mansour</a><div class="d">Bab Jdid · per chi non è ospite solo trattamenti, senza piscina</div><div class="meta"><span class="chip tk">Prenotare settimane prima</span></div></div></div>
     </div>
   </div>
+  </div>
+  </details>
 </section>
 
 <!-- RISTORANTI -->
-<section class="block" id="ristoranti" style="scroll-margin-top:72px">
-  <h2>Ristoranti segnati</h2>
+<section class="block fold" id="ristoranti" style="scroll-margin-top:72px">
+  <details class="blkdet">
+  <summary><div class="blkhead"><div><h2>Ristoranti segnati</h2><p>4 nomi dalla tua lista</p></div><span class="chev" aria-hidden="true"></span></div></summary>
+  <div class="blkbody">
   <p>Dalla tua lista, senza città indicata.</p>
   <div class="card">
     <div class="part">
@@ -640,11 +674,15 @@ a:focus-visible,input:focus-visible{outline:2px solid var(--blue);outline-offset
       <div class="item"><div><a class="t place" href="https://www.google.com/maps/search/?api=1&query=Gayza+Marrakech">Gayza</a></div></div>
     </div>
   </div>
+  </div>
+  </details>
 </section>
 
 <!-- BIGLIETTI -->
-<section class="block" id="biglietti" style="scroll-margin-top:72px">
-  <h2>Biglietti da fare</h2>
+<section class="block fold" id="biglietti" style="scroll-margin-top:72px">
+  <details class="blkdet">
+  <summary><div class="blkhead"><div><h2>Biglietti da fare</h2><p>9 cose da spuntare</p></div><span class="chev" aria-hidden="true"></span></div></summary>
+  <div class="blkbody">
   <p>Spunta quando li hai presi. Resta salvato su questo telefono. El Bahia, Ben Youssef, Dar El Bacha e Tombe Saadiane si pagano sul posto. Già presi: Majorelle, Jardin Secret, bus Terravision.</p>
   <div class="card">
     <label class="check"><input type="checkbox" id="tk-esim"><div><div class="t">Attivare l'eSIM</div><div class="d">Prima di partire · ~31,70 € a testa</div></div></label>
@@ -657,11 +695,13 @@ a:focus-visible,input:focus-visible{outline:2px solid var(--blue);outline-offset
     <label class="check"><input type="checkbox" id="tk-palaisfes"><div><div class="t">Prenotare il Palais de Fès</div><div class="d">Gio 8 · tramonto</div></div></label>
     <label class="check"><input type="checkbox" id="tk-guida"><div><div class="t">Prenotare la guida a Fès</div><div class="d">Gio 8 · mezza giornata</div></div></label>
   </div>
+  </div>
+  </details>
 </section>
 
 <!-- SOLDI -->
 <section class="block" id="soldi" style="scroll-margin-top:72px">
-  <h2>Soldi</h2>
+  <h2>Convertitore</h2>
   <p>La moneta è il dirham (MAD). Cambio preso dal tuo biglietto Majorelle: 660 MAD = 61 €.</p>
   <div class="card conv">
     <div class="row">
@@ -670,6 +710,9 @@ a:focus-visible,input:focus-visible{outline:2px solid var(--blue);outline-offset
     </div>
     <div class="rate"><span>1 € =</span><input id="cv-rate" type="text" inputmode="decimal" value="10,8" aria-label="Cambio dirham per euro" autocomplete="off"><span>MAD · puoi cambiarlo</span></div>
   </div>
+  <details class="blkdet">
+  <summary><div class="blkhead"><div><h2>Soldi e budget</h2><p>Tabella dei cambi, contanti, mance, spese del viaggio</p></div><span class="chev" aria-hidden="true"></span></div></summary>
+  <div class="blkbody">
   <div class="card tbox">
     <table class="t">
       <tr><td>10 MAD</td><td>0,93 €</td></tr>
@@ -703,11 +746,15 @@ a:focus-visible,input:focus-visible{outline:2px solid var(--blue);outline-offset
     </table>
     <p class="note" style="margin:0 0 6px">Dal tuo foglio budget. Biglietti da pagare sul posto: circa 66 € in 2 (El Bahia, Ben Youssef, Dar El Bacha, Tombe Saadiane).</p>
   </div>
+  </div>
+  </details>
 </section>
 
 <!-- CONSIGLI -->
-<section class="block" id="consigli" style="scroll-margin-top:72px">
-  <h2>Consigli</h2>
+<section class="block fold" id="consigli" style="scroll-margin-top:72px">
+  <details class="blkdet">
+  <summary><div class="blkhead"><div><h2>Consigli</h2><p>Taxi, souk, vestiti, acqua, documenti</p></div><span class="chev" aria-hidden="true"></span></div></summary>
+  <div class="blkbody">
   <div class="card">
     <ul class="tips">
     <li><b>Venerdì 9 a Fès</b><span>Il venerdì a mezzogiorno è la preghiera principale: molte botteghe della medina chiudono per qualche ora.</span></li>
@@ -721,11 +768,15 @@ a:focus-visible,input:focus-visible{outline:2px solid var(--blue);outline-offset
     <li><b>Documenti</b><span>Serve il passaporto, la carta d'identità non basta. Tienilo sempre con te: lo chiedono gli hotel.</span></li>
     </ul>
   </div>
+  </div>
+  </details>
 </section>
 
 <!-- PAROLE -->
-<section class="block" id="parole" style="scroll-margin-top:72px">
-  <h2>Parole utili</h2>
+<section class="block fold" id="parole" style="scroll-margin-top:72px">
+  <details class="blkdet">
+  <summary><div class="blkhead"><div><h2>Parole utili</h2><p>Darija e francese</p></div><span class="chev" aria-hidden="true"></span></div></summary>
+  <div class="blkbody">
   <p>Si parla darija (arabo marocchino). Il francese lo capiscono quasi tutti.</p>
   <div class="card">
     <dl class="ph">
@@ -745,11 +796,15 @@ a:focus-visible,input:focus-visible{outline:2px solid var(--blue);outline-offset
       <dt>Où est… ?</dt><dd>Dov'è…?</dd>
     </dl>
   </div>
+  </div>
+  </details>
 </section>
 
 <!-- SOS -->
-<section class="block" id="sos" style="scroll-margin-top:72px">
-  <h2>Emergenze</h2>
+<section class="block fold" id="sos" style="scroll-margin-top:72px">
+  <details class="blkdet">
+  <summary><div class="blkhead"><div><h2>Emergenze</h2><p>Numeri del Marocco e assicurazione</p></div><span class="chev" aria-hidden="true"></span></div></summary>
+  <div class="blkbody">
   <p>Numeri del Marocco, gratuiti anche dal cellulare.</p>
   <div class="card">
     <div class="sosrow"><div><div class="t"><b>Ambulanza e vigili del fuoco</b></div></div><a class="n" href="tel:15">15</a></div>
@@ -772,6 +827,8 @@ a:focus-visible,input:focus-visible{outline:2px solid var(--blue);outline-offset
       <div style="font-size:14px;color:var(--muted)">Certificato PDF salvato sul telefono · <a href="https://amex.eclaims.europ-assistance.com/">amex.eclaims.europ-assistance.com</a></div>
     </div>
   </div>
+  </div>
+  </details>
 </section>
 
 <footer>Dai file Excel dell'itinerario (programma corretto: rientro sabato 10) · i minuti indicano il tempo dal punto precedente.</footer>
@@ -811,17 +868,21 @@ a:focus-visible,input:focus-visible{outline:2px solid var(--blue);outline-offset
     fromMad();
   })();
   (function(){
-    var dets=[].slice.call(document.querySelectorAll('details.daydet'));
-    function openId(id){ var sec=document.getElementById(id); if(sec){ var d=sec.querySelector('details.daydet'); if(d) d.open=true; } }
+    function openId(id){ var sec=document.getElementById(id); if(sec){ var d=sec.querySelector('details.daydet, details.blkdet'); if(d) d.open=true; } }
     var t=document.querySelector('section.day.is-today'); if(t) openId(t.id);
     if(location.hash) openId(location.hash.slice(1));
-    document.querySelectorAll('nav.days a[href^="#g"]').forEach(function(a){ a.addEventListener('click',function(){ openId(a.getAttribute('href').slice(1)); }); });
-    var b=document.getElementById('toggle-all'); if(!b) return;
-    b.hidden=false;
-    function label(){ b.textContent = dets.every(function(d){return d.open;}) ? 'Chiudi tutti' : 'Apri tutti'; }
-    b.addEventListener('click',function(){ var all=dets.every(function(d){return d.open;}); dets.forEach(function(d){ d.open=!all; }); label(); });
-    dets.forEach(function(d){ d.addEventListener('toggle',label); });
-    label();
+    document.querySelectorAll('a[href^="#"]').forEach(function(a){ a.addEventListener('click',function(){ openId(a.getAttribute('href').slice(1)); }); });
+    function group(btnId, sel){
+      var b=document.getElementById(btnId), dets=[].slice.call(document.querySelectorAll(sel));
+      if(!b || !dets.length) return;
+      b.hidden=false;
+      function label(){ b.textContent = dets.every(function(d){return d.open;}) ? 'Chiudi tutti' : 'Apri tutti'; }
+      b.addEventListener('click',function(){ var all=dets.every(function(d){return d.open;}); dets.forEach(function(d){ d.open=!all; }); label(); });
+      dets.forEach(function(d){ d.addEventListener('toggle',label); });
+      label();
+    }
+    group('toggle-all','details.daydet');
+    group('toggle-rest','details.blkdet');
   })();
 })();
 </script>
