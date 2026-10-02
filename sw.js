@@ -1,4 +1,4 @@
-const CACHE = "marocco-20261002183822";
+const CACHE = "marocco-20261002184119";
 const CORE = ["./", "index.html", "manifest.webmanifest", "apple-touch-icon.png", "icon-192.png", "icon-512.png"];
 self.addEventListener("install", e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(CORE)).then(() => self.skipWaiting()));
@@ -10,7 +10,7 @@ self.addEventListener("activate", e => {
 self.addEventListener("fetch", e => {
   if (e.request.method !== "GET") return;
   e.respondWith(
-    fetch(e.request).then(r => {
+    (e.request.mode === "navigate" ? fetch(e.request.url, {cache: "no-cache"}) : fetch(e.request)).then(r => {
       const copy = r.clone();
       caches.open(CACHE).then(c => c.put(e.request, copy)).catch(() => {});
       return r;
