@@ -123,6 +123,8 @@ section.day.is-today .badge-today{display:inline-block}
 .meta{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px;align-items:center}
 .chip{font-size:12.5px;font-weight:600;border-radius:999px;padding:2px 9px;background:var(--bg);color:var(--muted);border:1px solid var(--line)}
 .chip.tk{background:var(--saffron-bg);color:var(--saffron);border-color:transparent}
+.chip.ok{background:var(--blue-bg);color:var(--blue);border-color:transparent}
+.chip.ok::before{content:"✓ "}
 .chip.q{background:var(--blue-bg);color:var(--blue);border-color:transparent}
 .place{color:inherit;text-decoration:underline;text-decoration-color:var(--line);text-decoration-thickness:2px;text-underline-offset:4px;display:inline}
 .place::after{content:"";display:inline-block;width:.8em;height:.8em;margin-left:.35em;vertical-align:-.05em;background:var(--city,var(--blue));
@@ -254,15 +256,19 @@ a:focus-visible,input:focus-visible{outline:2px solid var(--blue);outline-offset
   <details class="daydet">
   <summary>
   <div class="dayhead"><div class="num">1</div><div><h2>Arrivo a Marrakech</h2><p>Sabato 3 ottobre <span class="badge-today">Oggi</span></p></div><span class="chev" aria-hidden="true"></span></div>
-  <div class="sum"><span>Arrivo 15:25</span><span>3 posti</span><span>Riad Alia</span><span>+2 idee</span></div>
+  <div class="sum"><span>Bus 11:10</span><span>Arrivo 15:25</span><span>3 posti</span><span>Riad Alia</span><span>+2 idee</span></div>
   </summary>
   <div class="daybody">
   <div class="card move">
-    <div class="lbl">Arrivo</div>
+    <div class="lbl">Andata · bus Terravision + Ryanair</div>
     <ul>
+      <li><time>10:55</time><span>Alla fermata Terravision di Milano Centrale: uscita Piazza Luigi di Savoia, sul marciapiede davanti alla stazione</span></li>
+      <li><time>11:10</time><span>Bus Milano Centrale → aeroporto di Bergamo (BGY)</span></li>
+      <li><time></time><span>Volo Bergamo → Marrakech</span></li>
       <li><time>15:25</time><span>Atterraggio a Marrakech (RAK)</span></li>
       <li><time>16:30</time><span>In hotel con il pickup del riad (circa 20 min)</span></li>
     </ul>
+    <p class="note">Il biglietto del bus vale anche sul telefono. Bisogna essere alla fermata almeno 15 minuti prima.</p>
   </div>
   <div class="card hotel">
     <div class="lbl">Hotel · 4 notti, 3 → 7 ottobre</div>
@@ -297,14 +303,14 @@ a:focus-visible,input:focus-visible{outline:2px solid var(--blue);outline-offset
   <details class="daydet">
   <summary>
   <div class="dayhead"><div class="num">2</div><div><h2>Marrakech</h2><p>Domenica 4 ottobre <span class="badge-today">Oggi</span></p></div><span class="chev" aria-hidden="true"></span></div>
-  <div class="sum"><span>6 posti</span><span>2 biglietti sul posto</span><span>3 biglietti da prenotare</span><span>+6 idee</span></div>
+  <div class="sum"><span>6 posti</span><span>2 biglietti presi</span><span>2 sul posto</span><span>+6 idee</span></div>
   </summary>
   <div class="daybody">
   <div class="card">
     <div class="part">
       <h3>Mattina</h3>
       <div class="item timed"><time>09:00</time><div><a class="t place" href="https://www.google.com/maps/search/?api=1&query=Bahia+Palace+Marrakech">Palazzo El Bahia</a><div class="d">5 min.</div><details class="about"><summary>Un po' di storia</summary><p>Palazzo di fine Ottocento costruito da Si Moussa, Gran Visir del Sultano, e ampliato dal figlio Ba Ahmed. Il nome significa «la bella». È famoso per i cortili, gli zellige, i soffitti dipinti in cedro e i giardini andalusi: circa 150 stanze su 8 ettari.</p></details><div class="meta"><span class="chip tk">Si paga sul posto · ~26 € in 2</span></div></div></div>
-      <div class="item timed"><time>11:30</time><div><a class="t place" href="https://www.google.com/maps/search/?api=1&query=Jardin+Majorelle+Marrakech">Jardin Majorelle e Museo Yves Saint Laurent</a><div class="d">25 min a piedi dal riad, 10 min in macchina.</div><details class="about"><summary>Un po' di storia</summary><p>Il giardino creato dal pittore francese Jacques Majorelle a partire dal 1923: il suo blu intenso oggi si chiama proprio «blu Majorelle». Nel 1980 lo comprarono Yves Saint Laurent e Pierre Bergé, che lo salvarono dalla demolizione; le ceneri di Saint Laurent sono sparse qui. Accanto, il museo dedicato allo stilista, aperto nel 2017.</p></details><div class="meta"><span class="chip tk">Biglietto 660 MAD (~61 €) in 2</span></div></div></div>
+      <div class="item timed"><time>11:30</time><div><a class="t place" href="https://www.google.com/maps/search/?api=1&query=Jardin+Majorelle+Marrakech">Jardin Majorelle e Museo Yves Saint Laurent</a><div class="d">25 min a piedi dal riad, 10 min in macchina.</div><details class="about"><summary>Un po' di storia</summary><p>Il giardino creato dal pittore francese Jacques Majorelle a partire dal 1923: il suo blu intenso oggi si chiama proprio «blu Majorelle». Nel 1980 lo comprarono Yves Saint Laurent e Pierre Bergé, che lo salvarono dalla demolizione; le ceneri di Saint Laurent sono sparse qui. Accanto, il museo dedicato allo stilista, aperto nel 2017.</p></details><div class="meta"><span class="chip ok">Biglietto preso</span><span class="chip">Entrata 11:30–11:59</span></div><div class="d">Biglietto combinato per 2. Entrate entro 29 minuti dall'orario, altrimenti non vi fanno entrare. Si comincia dal giardino; una volta usciti non si rientra.</div></div></div>
     </div>
     <div class="part">
       <h3>Pranzo</h3>
@@ -313,7 +319,7 @@ a:focus-visible,input:focus-visible{outline:2px solid var(--blue);outline-offset
     <div class="part">
       <h3>Pomeriggio · zona Mouassine</h3>
       <div class="item"><div><a class="t place" href="https://www.google.com/maps/search/?api=1&query=Musee+du+Parfum+Marrakech">Musée du Parfum</a><div class="d">Nel laboratorio puoi creare il tuo profumo.</div><details class="about"><summary>Un po' di storia</summary><p>Racconta la tradizione marocchina delle essenze: rosa di Kelaa M'Gouna, fiori d'arancio, cedro, ambra. Nel laboratorio si può comporre un profumo personale da portare a casa.</p></details><div class="meta"><span class="chip tk">Fare biglietto</span></div></div></div>
-      <div class="item"><div><a class="t place" href="https://www.google.com/maps/search/?api=1&query=Le+Jardin+Secret+Marrakech">Le Jardin Secret</a><div class="d">A pochi minuti a piedi.</div><details class="about"><summary>Un po' di storia</summary><p>Un riad-giardino nato nel XVI secolo, ricostruito nell'Ottocento e aperto al pubblico nel 2016. Ha due giardini, uno islamico tradizionale e uno di piante esotiche, alimentati dall'antico sistema di canali sotterranei che portava l'acqua dall'Atlante. Dalla torre si vede tutta la medina.</p></details><div class="meta"><span class="chip tk">~18,50 € in 2</span></div></div></div>
+      <div class="item"><div><a class="t place" href="https://www.google.com/maps/search/?api=1&query=Le+Jardin+Secret+Marrakech">Le Jardin Secret</a><div class="d">A pochi minuti a piedi.</div><details class="about"><summary>Un po' di storia</summary><p>Un riad-giardino nato nel XVI secolo, ricostruito nell'Ottocento e aperto al pubblico nel 2016. Ha due giardini, uno islamico tradizionale e uno di piante esotiche, alimentati dall'antico sistema di canali sotterranei che portava l'acqua dall'Atlante. Dalla torre si vede tutta la medina.</p></details><div class="meta"><span class="chip ok">Pagato · 200 MAD</span></div></div></div>
     </div>
     <div class="part">
       <h3>Tramonto e sera</h3>
@@ -525,7 +531,7 @@ a:focus-visible,input:focus-visible{outline:2px solid var(--blue);outline-offset
   <details class="daydet">
   <summary>
   <div class="dayhead"><div class="num">8</div><div><h2>Rientro a Milano</h2><p>Sabato 10 ottobre <span class="badge-today">Oggi</span></p></div><span class="chev" aria-hidden="true"></span></div>
-  <div class="sum"><span>Transfer + volo</span><span>Partenza 8:00</span><span>Volo 13:00</span></div>
+  <div class="sum"><span>Transfer + volo</span><span>Partenza 8:00</span><span>Volo 13:00</span><span>Bus da cambiare</span></div>
   </summary>
   <div class="daybody">
   <div class="card">
@@ -540,8 +546,10 @@ a:focus-visible,input:focus-visible{outline:2px solid var(--blue);outline-offset
       <li><time>8:00</time><span>Partenza da Chefchaouen</span></li>
       <li><time>2 h</time><span>In auto fino all'aeroporto di Tangeri</span></li>
       <li><time>13:00</time><span>Volo Tangeri → Bergamo (BGY)</span></li>
-      <li><time>17:45</time><span>Atterraggio a Bergamo, poi bus</span></li>
+      <li><time>17:45</time><span>Atterraggio a Bergamo</span></li>
+      <li><time>13:40?</time><span>Bus Terravision Bergamo → Milano Centrale</span></li>
     </ul>
+    <div class="alert" style="margin-top:10px">Il biglietto del bus di ritorno è per le 13:40, ma atterrate alle 17:45. Va cambiato con un orario dopo le 18:30.</div>
     <p class="note">Check-out e colazione prima delle 8:00. Partendo alle 8 siete in aeroporto verso le 10, tre ore prima del volo.</p>
   </div>
   </div>
@@ -636,11 +644,10 @@ a:focus-visible,input:focus-visible{outline:2px solid var(--blue);outline-offset
 <!-- BIGLIETTI -->
 <section class="block" id="biglietti" style="scroll-margin-top:72px">
   <h2>Biglietti da fare</h2>
-  <p>Spunta quando li hai presi. Resta salvato su questo telefono. El Bahia, Ben Youssef, Dar El Bacha e Tombe Saadiane si pagano sul posto.</p>
+  <p>Spunta quando li hai presi. Resta salvato su questo telefono. El Bahia, Ben Youssef, Dar El Bacha e Tombe Saadiane si pagano sul posto. Già presi: Majorelle, Jardin Secret, bus Terravision.</p>
   <div class="card">
     <label class="check"><input type="checkbox" id="tk-esim"><div><div class="t">Attivare l'eSIM</div><div class="d">Prima di partire · ~31,70 € a testa</div></div></label>
-    <label class="check"><input type="checkbox" id="tk-majorelle"><div><div class="t">Jardin Majorelle e Museo YSL</div><div class="d">Dom 4 · ore 11:30 · 660 MAD in 2</div></div></label>
-    <label class="check"><input type="checkbox" id="tk-secret"><div><div class="t">Le Jardin Secret</div><div class="d">Dom 4 · ~18,50 € in 2</div></div></label>
+    <label class="check"><input type="checkbox" id="tk-busritorno"><div><div class="t">Cambiare il bus di ritorno</div><div class="d">Sab 10 · ora è alle 13:40, l'aereo atterra alle 17:45</div></div></label>
     <label class="check"><input type="checkbox" id="tk-photo"><div><div class="t">House of Photography</div><div class="d">Lun 5</div></div></label>
         <label class="check"><input type="checkbox" id="tk-parfum"><div><div class="t">Musée du Parfum</div><div class="d">Dom 4</div></div></label>
     <label class="check"><input type="checkbox" id="tk-essaouira"><div><div class="t">Decidere la gita a Essaouira</div><div class="d">Mar 6</div></div></label>
