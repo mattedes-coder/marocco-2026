@@ -1,0 +1,13 @@
+{
+  "name": "Marocco ottobre 2026",
+  "short_name": "Marocco",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#2438A8",
+  "theme_color": "#2438A8",
+  "icons": [
+    {"src": "icon-192.png", "sizes": "192x192", "type": "image/png"},
+    {"src": "icon-512.png", "sizes": "512x512", "type": "image/png"}
+  ]
+}

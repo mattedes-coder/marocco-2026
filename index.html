@@ -1,0 +1,822 @@
+<!doctype html>
+<html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}</style><link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="icon" href="icon-192.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Marocco"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="theme-color" content="#2438A8"><meta name="robots" content="noindex,nofollow">
+<title>Marocco ottobre 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Figtree:wght@400;500;600;700&display=swap">
+<style id="page-style">
+/* Layout: una colonna da telefono, striscia dei giorni fissa in alto, un blocco per giorno. Blu Majorelle + zafferano. */
+:root{
+  --bg:#F3F5FA; --surface:#FFFFFF; --ink:#1B2140; --muted:#5D6582; --line:#DCE1EE;
+  --blue:#2F45B5; --blue-bg:#E6EAFA; --saffron:#9A6508; --saffron-bg:#FBF0D9;
+  --red:#B42318; --red-bg:#FDECEA; --hero-bg:#2438A8; --hero-fg:#FFFFFF; --hero-gold:#FFD27A; --c-rak:#2F45B5; --c-fes:#A35A12; --c-chf:#1A7FB0;
+  --display:"Young Serif", Georgia, "Times New Roman", serif;
+  --body:"Figtree", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0F1222; --surface:#181C30; --ink:#E9ECF7; --muted:#9AA2C0; --line:#2A2F4A;
+  --blue:#93A2FF; --blue-bg:#1F2650; --saffron:#F0B54A; --saffron-bg:#3A2C10;
+  --red:#FF8A80; --red-bg:#3D1715; --hero-bg:#1B2A86; --hero-fg:#FFFFFF; --hero-gold:#FFD27A; --c-rak:#93A2FF; --c-fes:#EAA45C; --c-chf:#6CC6F0; color-scheme:dark }}
+:root[data-theme="dark"]{
+  --bg:#0F1222; --surface:#181C30; --ink:#E9ECF7; --muted:#9AA2C0; --line:#2A2F4A;
+  --blue:#93A2FF; --blue-bg:#1F2650; --saffron:#F0B54A; --saffron-bg:#3A2C10;
+  --red:#FF8A80; --red-bg:#3D1715; --hero-bg:#1B2A86; --hero-fg:#FFFFFF; --hero-gold:#FFD27A; --c-rak:#93A2FF; --c-fes:#EAA45C; --c-chf:#6CC6F0; color-scheme:dark }
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.45;-webkit-text-size-adjust:100%}
+a{color:var(--blue)}
+.wrap{max-width:600px;margin:0 auto;padding-inline:16px;padding-block:0 48px}
+
+header.hero{position:relative;overflow:hidden;margin-top:12px;border-radius:28px 28px 22px 22px;background:var(--hero-bg);color:var(--hero-fg)}
+.zellige{position:absolute;inset:0;opacity:.16;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Cg fill='none' stroke='%23FFD27A' stroke-width='1.4'%3E%3Crect x='12' y='12' width='24' height='24'/%3E%3Crect x='12' y='12' width='24' height='24' transform='rotate(45 24 24)'/%3E%3Ccircle cx='24' cy='24' r='5'/%3E%3Cpath d='M0 0L6 6M48 0L42 6M0 48L6 42M48 48L42 42'/%3E%3C/g%3E%3C/svg%3E");
+  -webkit-mask-image:linear-gradient(180deg,#000 0%,#000 30%,transparent 75%);mask-image:linear-gradient(180deg,#000 0%,#000 30%,transparent 75%)}
+.hero-in{position:relative;padding:26px 20px 20px}
+.h-eyebrow{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--hero-gold)}
+header.hero h1{font-family:var(--display);font-weight:400;font-size:clamp(58px,17vw,84px);line-height:.95;margin:8px 0 14px;letter-spacing:-.01em}
+.h-facts{display:flex;flex-wrap:wrap;gap:8px}
+.h-facts span{font-size:14px;padding:4px 11px;border-radius:999px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18)}
+.h-facts b{font-weight:800;color:var(--hero-gold)}
+.route-map{display:block;width:100%;max-width:100%;height:auto;margin-top:14px}
+.route-map .coast{fill:none;stroke:rgba(255,255,255,.35);stroke-width:1.5;stroke-linejoin:round}
+.route-map .sea{fill:rgba(255,255,255,.45);font:italic 12px var(--body)}
+.route-map .trip{fill:none;stroke:#FFFFFF;stroke-width:2.5;stroke-linecap:round}
+.route-map .fly{stroke-dasharray:2 7}
+.route-map .opt{stroke:rgba(255,255,255,.5);stroke-dasharray:2 5;stroke-width:1.5}
+.route-map .dot{fill:#FFFFFF;stroke:var(--hero-bg);stroke-width:3}
+.route-map .dot.opt{fill:rgba(255,255,255,.5);stroke:none}
+.route-map .lbl{fill:#FFFFFF;font:700 15px var(--body);paint-order:stroke;stroke:var(--hero-bg);stroke-width:5px;stroke-linejoin:round}
+.route-map .lbl.small{font-size:12px;font-weight:600;fill:rgba(255,255,255,.75)}
+.route-map .mode{font-style:italic}
+header.hero .status{margin-top:10px;display:inline-block;background:var(--hero-gold);color:var(--hero-bg);font-weight:800;padding:6px 14px;border-radius:999px;font-size:15px}
+header.hero .status:empty{display:none}
+.hint{margin:12px 2px 4px;font-size:14px;color:var(--muted)}
+@media (prefers-reduced-motion:no-preference){
+  .route-map .drive{stroke-dasharray:240;animation:draw 1.4s .5s ease-out both}
+  @keyframes draw{from{stroke-dashoffset:240}to{stroke-dashoffset:0}}
+  header.hero h1{animation:rise .7s ease-out both}
+  @keyframes rise{from{transform:translateY(10px)}to{transform:none}}
+}
+.eyebrow{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--blue)}
+
+nav.days{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);
+  margin-inline:-16px;padding:8px 16px 10px;border-bottom:1px solid var(--line);
+  display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+nav.days::-webkit-scrollbar{display:none}
+nav.days a{flex:0 0 auto;text-decoration:none;color:var(--ink);background:var(--surface);border:1px solid var(--line);
+  border-radius:12px;padding:6px 10px;text-align:center;min-width:52px;font-variant-numeric:tabular-nums}
+nav.days a small{display:block;font-size:11px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+nav.days a span{font-size:18px;font-weight:700}
+nav.days a.today{background:var(--blue);border-color:var(--blue);color:var(--bg)}
+nav.days a.today small{color:var(--bg)}
+nav.days a.sos{color:var(--red);border-color:var(--red)}
+nav.days a.sos span{font-size:15px}
+
+section.day{scroll-margin-top:72px}
+.daybar{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-top:26px}
+.daybar h2{font-family:var(--display);font-weight:400;font-size:22px;margin:0}
+.linkbtn{appearance:none;background:none;border:0;padding:4px 0;font:inherit;font-weight:700;font-size:15px;color:var(--blue);cursor:pointer}
+details.daydet{border-bottom:1px solid var(--line)}
+details.daydet > summary{list-style:none;cursor:pointer;padding-block:16px;-webkit-tap-highlight-color:transparent}
+details.daydet > summary::-webkit-details-marker{display:none}
+details.daydet > summary:focus-visible{outline:2px solid var(--blue);outline-offset:4px;border-radius:12px}
+.dayhead > div:nth-child(2){min-width:0;flex:1}
+.chev{flex:0 0 auto;width:32px;height:32px;border-radius:50%;border:1px solid var(--line);background:var(--surface);position:relative;align-self:center}
+.chev::after{content:"";position:absolute;left:50%;top:50%;width:8px;height:8px;border-right:2px solid var(--city,var(--blue));border-bottom:2px solid var(--city,var(--blue));transform:translate(-50%,-70%) rotate(45deg)}
+details[open] .chev::after{transform:translate(-50%,-30%) rotate(-135deg)}
+.daybody{padding-bottom:22px}
+details.about{margin-top:6px}
+details.about > summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:700;color:var(--city,var(--blue));padding:2px 0}
+details.about > summary::-webkit-details-marker{display:none}
+details.about > summary::before{content:"+";display:inline-grid;place-items:center;width:18px;height:18px;border-radius:50%;border:1.5px solid currentColor;font-size:13px;line-height:1}
+details.about[open] > summary::before{content:"–"}
+details.about p{margin:6px 0 2px;font-size:15px;line-height:1.55;color:var(--ink);max-width:62ch}
+details.about.intro{margin:10px 0 14px}
+.card.ideas{border-style:dashed;background:transparent}
+.card.ideas h3{color:var(--saffron)}
+.daybody > .card:first-child,.daybody > .note:first-child,.daybody > .alert:first-child{margin-top:0}
+@media (prefers-reduced-motion:no-preference){.chev::after{transition:transform .2s}}
+
+.dayhead{display:flex;gap:14px;align-items:center}
+.num{font-family:var(--display);font-size:34px;line-height:1;color:var(--surface);background:var(--city,var(--blue));font-variant-numeric:tabular-nums;width:56px;height:70px;flex:0 0 56px;display:grid;place-items:center;padding-top:10px;border-radius:28px 28px 8px 8px;box-shadow:inset 0 0 0 3px var(--city,var(--blue)),inset 0 0 0 5px rgba(255,255,255,.35)}
+.dayhead h2{font-family:var(--display);font-weight:400;font-size:26px;line-height:1.1;margin:0;text-wrap:balance}
+.dayhead p{margin:3px 0 0;color:var(--muted);font-size:14px;font-weight:600;letter-spacing:.04em;text-transform:uppercase}
+.badge-today{display:none;margin-left:6px;background:var(--city,var(--blue));color:var(--bg);border-radius:6px;padding:1px 7px;font-size:12px}
+section.day.is-today .badge-today{display:inline-block}
+
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;margin-top:14px;overflow:hidden}
+.move{background:var(--blue-bg);border-color:transparent;padding:12px 16px}
+.move .lbl{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--blue)}
+.move ul{margin:6px 0 0;padding:0;list-style:none;display:grid;gap:4px}
+.move li{display:flex;gap:10px}
+.move time{font-weight:700;font-variant-numeric:tabular-nums;min-width:48px}
+.note{margin:8px 0 0;font-size:15px;color:var(--muted)}
+
+.part{padding:4px 16px 4px}
+.part + .part{border-top:1px solid var(--line)}
+.part h3{margin:12px 0 2px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.item{display:grid;grid-template-columns:1fr;gap:10px;padding:10px 0}
+.item.timed{grid-template-columns:52px 1fr}
+.item + .item{border-top:1px dashed var(--line)}
+.item time{font-weight:700;font-variant-numeric:tabular-nums;padding-top:1px}
+.item .t{font-weight:600;min-width:0}
+.item .d{font-size:15px;color:var(--muted);margin-top:2px}
+.meta{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px;align-items:center}
+.chip{font-size:12.5px;font-weight:600;border-radius:999px;padding:2px 9px;background:var(--bg);color:var(--muted);border:1px solid var(--line)}
+.chip.tk{background:var(--saffron-bg);color:var(--saffron);border-color:transparent}
+.chip.q{background:var(--blue-bg);color:var(--blue);border-color:transparent}
+.place{color:inherit;text-decoration:underline;text-decoration-color:var(--line);text-decoration-thickness:2px;text-underline-offset:4px;display:inline}
+.place::after{content:"";display:inline-block;width:.8em;height:.8em;margin-left:.35em;vertical-align:-.05em;background:var(--city,var(--blue));
+  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z'/%3E%3C/svg%3E") center/contain no-repeat;
+  mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z'/%3E%3C/svg%3E") center/contain no-repeat}
+.place:active{opacity:.6}
+.hotel .name.place{text-decoration-thickness:2px}
+[data-city="rak"]{--city:var(--c-rak)} [data-city="fes"]{--city:var(--c-fes)} [data-city="chf"]{--city:var(--c-chf)}
+.sum{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.sum span{font-size:13px;font-weight:600;padding:3px 10px;border-radius:999px;background:var(--surface);border:1px solid var(--line);color:var(--ink)}
+.sum span:first-child{border-color:var(--city);color:var(--city)}
+section.day.is-today .card{border-color:var(--city);box-shadow:0 0 0 1px var(--city)}
+section.day.is-today .card.move{box-shadow:0 0 0 2px var(--city)}
+nav.days a[data-city] small{color:var(--city)}
+nav.days a.today{background:var(--city,var(--blue));border-color:var(--city,var(--blue))}
+
+.block{margin-top:34px}
+.block h2{font-family:var(--display);font-weight:400;font-size:26px;margin:0 0 4px}
+.block > p{margin:0;color:var(--muted);font-size:15px}
+.check{display:flex;gap:12px;align-items:flex-start;padding:12px 16px}
+.check + .check{border-top:1px solid var(--line)}
+.check input{width:22px;height:22px;margin:1px 0 0;accent-color:var(--blue);flex:0 0 auto}
+.check .d{font-size:14px;color:var(--muted)}
+.check input:checked + div .t{text-decoration:line-through;color:var(--muted)}
+
+.sosrow{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 16px}
+.sosrow + .sosrow{border-top:1px solid var(--line)}
+.sosrow .n{font-size:26px;font-weight:700;font-variant-numeric:tabular-nums;color:var(--red);text-decoration:none}
+.ins{padding:14px 16px;display:grid;gap:8px;font-size:15px}
+.ins dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:4px 14px}
+.ins dt{color:var(--muted)}
+.ins dd{margin:0;font-weight:600}
+.hotel{padding:14px 16px;display:grid;gap:6px}
+.hotel .lbl{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--saffron)}
+.hotel .name{font-family:var(--display);font-size:21px;line-height:1.15}
+.hotel .d{font-size:15px;color:var(--muted)}
+.codes{display:grid;grid-template-columns:auto 1fr;gap:2px 12px;font-size:15px;margin:4px 0 0}
+.codes dt{color:var(--muted)} .codes dd{margin:0;font-weight:700;font-variant-numeric:tabular-nums;user-select:all;-webkit-user-select:all}
+.alert{background:var(--red-bg);color:var(--red);border-radius:16px;padding:12px 16px;margin-top:14px;font-weight:600;font-size:15px}
+.links{display:flex;flex-wrap:wrap;gap:6px 14px;margin-top:6px;font-size:14px;font-weight:600}
+.warn{background:var(--red-bg);color:var(--red);border-radius:10px;padding:10px 12px;font-weight:600;font-size:15px}
+.dl{padding:14px 16px;display:grid;gap:10px}
+.btn{appearance:none;border:0;border-radius:12px;background:var(--blue);color:var(--bg);font:inherit;font-weight:700;font-size:17px;padding:13px 16px;cursor:pointer}
+.btn:disabled{opacity:.6}
+.dlmsg{font-size:14px;color:var(--muted)}
+.dlmsg:empty{display:none}
+.conv{padding:14px 16px;display:grid;gap:12px}
+.conv .row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.conv label{display:grid;gap:4px;font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.conv input{font:inherit;font-size:24px;font-weight:700;font-variant-numeric:tabular-nums;width:100%;min-width:0;padding:8px 12px;border:1px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink)}
+.conv .rate{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--muted);flex-wrap:wrap}
+.conv .rate input{font-size:15px;width:84px;padding:4px 8px}
+table.t{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;font-size:15px}
+table.t td{padding:7px 0;border-top:1px solid var(--line)}
+table.t tr:first-child td{border-top:0}
+table.t td:last-child{text-align:right;font-weight:600}
+table.t td.sub{color:var(--muted);font-weight:400;font-size:13px}
+table.t tr.tot td{border-top:2px solid var(--ink);font-weight:700;font-size:17px}
+.tbox{padding:6px 16px 10px}
+.tips{margin:0;padding:6px 16px 10px;list-style:none}
+.tips li{padding:10px 0;border-top:1px solid var(--line);font-size:15px}
+.tips li:first-child{border-top:0}
+.tips b{display:block;font-size:16px;color:var(--ink)}
+.tips span{color:var(--muted)}
+.ph{display:grid;grid-template-columns:auto 1fr;gap:0 14px;padding:6px 16px 10px;margin:0}
+.ph dt,.ph dd{padding:9px 0;border-top:1px solid var(--line)}
+.ph dt:first-of-type,.ph dd:first-of-type{border-top:0}
+.ph dt{font-weight:700;font-size:17px}
+.ph dd{margin:0;color:var(--muted);font-size:15px}
+.ph .grp{grid-column:1/-1;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);padding:14px 0 2px;border-top:0}
+footer{margin-top:30px;color:var(--muted);font-size:13px}
+a:focus-visible,input:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+</style>
+
+<div class="wrap">
+<header class="hero">
+  <div class="zellige" aria-hidden="true"></div>
+  <div class="hero-in">
+    <div class="h-eyebrow">3 – 10 ottobre 2026</div>
+    <h1>Marocco</h1>
+    <div class="h-facts"><span><b>8</b> giorni</span><span><b>3</b> città</span><span><b>3</b> riad</span><span><b>2</b> voli</span></div>
+    <svg class="route-map" viewBox="-6 -6 356 312" role="img" aria-label="Percorso: Marrakech, Fès, Chefchaouen, Tangeri">
+      <polyline class="coast" points="252,16 238,37 230,55 205,110 190,125 145,152 90,171 46,228 14,275 10,300"/>
+      <polyline class="coast" points="252,16 268,8 281,13 281,25 294,39 320,54 345,60"/>
+      <text class="sea" x="40" y="96">Oceano</text><text class="sea" x="40" y="112">Atlantico</text>
+      <text class="sea" x="296" y="10" text-anchor="end">Mediterraneo</text>
+      <line class="trip opt" x1="120" y1="268" x2="16" y2="275"/>
+      <path class="trip fly" d="M120,268 Q300,250 300,124"/>
+      <path class="trip drive" d="M300,124 L284,56 L252,20"/>
+      <circle class="dot opt" cx="16" cy="275" r="4"/>
+      <text class="lbl small" x="20" y="295">Essaouira?</text>
+      <circle class="dot" cx="120" cy="268" r="7" style="fill:#7F95FF"/>
+      <text class="lbl" x="132" y="290">Marrakech</text><text class="lbl small" x="132" y="304" style="fill:#FFD27A">giorni 1–5</text>
+      <circle class="dot" cx="300" cy="124" r="7" style="fill:#F2A65A"/>
+      <text class="lbl" x="284" y="146" text-anchor="end">Fès</text><text class="lbl small" x="284" y="160" text-anchor="end" style="fill:#FFD27A">giorni 5–7</text>
+      <circle class="dot" cx="284" cy="56" r="7" style="fill:#7FD3F7"/>
+      <text class="lbl" x="272" y="72" text-anchor="end">Chefchaouen</text><text class="lbl small" x="272" y="86" text-anchor="end" style="fill:#FFD27A">giorni 7–8</text>
+      <circle class="dot" cx="252" cy="20" r="5"/>
+      <text class="lbl small" x="240" y="34" text-anchor="end">Tangeri ✈</text>
+      <text class="lbl small mode" x="236" y="276">✈ volo</text>
+      <text class="lbl small mode" x="305" y="96">auto</text>
+    </svg>
+    <div class="status" id="status"></div>
+  </div>
+</header>
+<div class="hint">Tocca il nome di un posto per aprirlo in Google Maps.</div>
+
+<nav class="days" aria-label="Giorni">
+  <a href="#g1" data-city="rak" data-date="2026-10-03"><small>Sab</small><span>3</span></a>
+  <a href="#g2" data-city="rak" data-date="2026-10-04"><small>Dom</small><span>4</span></a>
+  <a href="#g3" data-city="rak" data-date="2026-10-05"><small>Lun</small><span>5</span></a>
+  <a href="#g4" data-city="rak" data-date="2026-10-06"><small>Mar</small><span>6</span></a>
+  <a href="#g5" data-city="fes" data-date="2026-10-07"><small>Mer</small><span>7</span></a>
+  <a href="#g6" data-city="fes" data-date="2026-10-08"><small>Gio</small><span>8</span></a>
+  <a href="#g7" data-city="chf" data-date="2026-10-09"><small>Ven</small><span>9</span></a>
+  <a href="#g8" data-city="chf" data-date="2026-10-10"><small>Sab</small><span>10</span></a>
+  <a href="#hotel"><small>Hotel</small><span>3</span></a>
+  <a href="#gabriella"><small>Lista</small><span>G</span></a>
+  <a href="#biglietti"><small>Da fare</small><span>✓</span></a>
+  <a href="#soldi"><small>Soldi</small><span>MAD</span></a>
+  <a href="#consigli"><small>Consigli</small><span>i</span></a>
+  <a href="#sos" class="sos"><small>Aiuto</small><span>SOS</span></a>
+</nav>
+
+<div class="daybar"><h2>Il viaggio giorno per giorno</h2><button type="button" class="linkbtn" id="toggle-all" hidden>Apri tutti</button></div>
+<!-- GIORNO 1 -->
+<section class="day" id="g1" data-city="rak" data-date="2026-10-03">
+  <details class="daydet">
+  <summary>
+  <div class="dayhead"><div class="num">1</div><div><h2>Arrivo a Marrakech</h2><p>Sabato 3 ottobre <span class="badge-today">Oggi</span></p></div><span class="chev" aria-hidden="true"></span></div>
+  <div class="sum"><span>Arrivo 15:25</span><span>3 posti</span><span>Riad Alia</span><span>+2 idee</span></div>
+  </summary>
+  <div class="daybody">
+  <div class="card move">
+    <div class="lbl">Arrivo</div>
+    <ul>
+      <li><time>15:25</time><span>Atterraggio a Marrakech (RAK)</span></li>
+      <li><time>16:30</time><span>In hotel con il pickup del riad (circa 20 min)</span></li>
+    </ul>
+  </div>
+  <div class="card hotel">
+    <div class="lbl">Hotel · 4 notti, 3 → 7 ottobre</div>
+    <a class="name place" href="https://www.google.com/maps/search/?api=1&query=Riad+Alia+Derb+Manchoura+38+Marrakech">Riad Alia</a>
+    <div class="d">Derb Manchoura 38, Mellah, 40000 Marrakech</div>
+    <div class="meta"><span class="chip">Pickup aeroporto col riad</span></div>
+  </div>
+  <div class="card">
+    <div class="part">
+      <h3>Pomeriggio</h3>
+      <div class="item"><div><a class="t place" href="https://www.google.com/maps/search/?api=1&query=Koutoubia+Mosque+Marrakech">Moschea Koutoubia</a><div class="d">19 min a piedi. Si visita solo da fuori: l'interno è riservato ai fedeli.</div><details class="about"><summary>Un po' di storia</summary><p>La moschea più grande di Marrakech, del XII secolo, costruita dalla dinastia almohade. Il minareto di 77 metri è il simbolo della città ed è stato il modello della Giralda di Siviglia. Il nome viene dai <i>kutubiyyin</i>, i librai che un tempo avevano le bancarelle tutto intorno.</p></details><div class="meta"><span class="chip">Solo esterno</span></div></div></div>
+      <div class="item"><div><a class="t place" href="https://www.google.com/maps/search/?api=1&query=Jemaa+el-Fna+Marrakech">Piazza Jemaa el-Fna</a><div class="d">3 min a piedi dalla moschea.</div><details class="about"><summary>Un po' di storia</summary><p>La piazza principale di Marrakech, patrimonio UNESCO: il cuore culturale della città da secoli. Di giorno è un mercato, con spremute d'arancia, erboristi e venditori. Al tramonto diventa un palcoscenico all'aperto, con musicisti, cantastorie e decine di banchi di cibo.</p></details></div></div>
+    </div>
+    <div class="part">
+      <h3>Tramonto</h3>
+      <div class="item"><div><a class="t place" href="https://www.google.com/maps/search/?api=1&query=La+Pergola+Marrakech">Aperitivo a La Pergola</a><div class="meta"><span class="chip q">Idea</span></div></div></div>
+    </div>
+  </div>
+  <div class="card ideas">
+    <div class="part">
+      <h3>Idee di Gabriella · tramonto</h3>
+      <div class="item"><div><a class="t place" href="https://www.google.com/maps/search/?api=1&query=MO-MO+rooftop+Marrakech">MÖ-MÖ</a><div class="d">Rooftop su due terrazze sopra Jemaa el-Fna. 15 min dal riad.</div><div class="meta"><span class="chip ">Niente prenotazione, si fa la coda</span></div></div></div>
+      <div class="item"><div><a class="t place" href="https://www.google.com/maps/search/?api=1&query=El+Fenn+Marrakech">El Fenn</a><div class="d">Rooftop dell'hotel, vicino alla Koutoubia. 25 min.</div><div class="meta"><span class="chip tk">Prenotare</span></div></div></div>
+    </div>
+  </div>
+  </div>
+  </details>
+</section>
+
+<!-- GIORNO 2 -->
+<section class="day" id="g2" data-city="rak" data-date="2026-10-04">
+  <details class="daydet">
+  <summary>
+  <div class="dayhead"><div class="num">2</div><div><h2>Marrakech</h2><p>Domenica 4 ottobre <span class="badge-today">Oggi</span></p></div><span class="chev" aria-hidden="true"></span></div>
+  <div class="sum"><span>6 posti</span><span>2 biglietti sul posto</span><span>3 biglietti da prenotare</span><span>+6 idee</span></div>
+  </summary>
+  <div class="daybody">
+  <div class="card">
+    <div class="part">
+      <h3>Mattina</h3>
+      <div class="item timed"><time>09:00</time><div><a class="t place" href="https://www.google.com/maps/search/?api=1&query=Bahia+Palace+Marrakech">Palazzo El Bahia</a><div class="d">5 min.</div><details class="about"><summary>Un po' di storia</summary><p>Palazzo di fine Ottocento costruito da Si Moussa, Gran Visir del Sultano, e ampliato dal figlio Ba Ahmed. Il nome significa «la bella». È famoso per i cortili, gli zellige, i soffitti dipinti in cedro e i giardini andalusi: circa 150 stanze su 8 ettari.</p></details><div class="meta"><span class="chip tk">Si paga sul posto · ~26 € in 2</span></div></div></div>
+      <div class="item timed"><time>11:30</time><div><a class="t place" href="https://www.google.com/maps/search/?api=1&query=Jardin+Majorelle+Marrakech">Jardin Majorelle e Museo Yves Saint Laurent</a><div class="d">25 min a piedi dal riad, 10 min in macchina.</div><details class="about"><summary>Un po' di storia</summary><p>Il giardino creato dal pittore francese Jacques Majorelle a partire dal 1923: il suo blu intenso oggi si chiama proprio «blu Majorelle». Nel 1980 lo comprarono Yves Saint Laurent e Pierre Bergé, che lo salvarono dalla demolizione; le ceneri di Saint Laurent sono sparse qui. Accanto, il museo dedicato allo stilista, aperto nel 2017.</p></details><div class="meta"><span class="chip tk">Biglietto 660 MAD (~61 €) in 2</span></div></div></div>
+    </div>
+    <div class="part">
+      <h3>Pranzo</h3>
+      <div class="item"><div><a class="t place" href="https://www.google.com/maps/search/?api=1&query=Dar+El+Bacha+Marrakech">Dar El Bacha e Bacha Coffee</a><div class="d">Taxi 10 min da Majorelle. Mostre su cultura e arti arabe, giardino interno bellissimo. Per il Bacha Coffee si fa la coda.</div><details class="about"><summary>Un po' di storia</summary><p>Imponente palazzo dei primi del Novecento nel cuore della medina. Costruito nel 1910, fu la residenza di Thami El Glaoui, il potentissimo pascià di Marrakech. Restaurato e riaperto nel 2017 come Museo delle Confluenze, è famoso per gli zellige, i soffitti in cedro intagliato e il cortile con gli aranci. Il Bacha Coffee riprende il nome di una caffetteria storica del palazzo.</p></details><div class="meta"><span class="chip tk">Si paga sul posto · ~11 € in 2</span></div></div></div>
+    </div>
+    <div class="part">
+      <h3>Pomeriggio · zona Mouassine</h3>
+      <div class="item"><div><a class="t place" href="https://www.google.com/maps/search/?api=1&query=Musee+du+Parfum+Marrakech">Musée du Parfum</a><div class="d">Nel laboratorio puoi creare il tuo profumo.</div><details class="about"><summary>Un po' di storia</summary><p>Racconta la tradizione marocchina delle essenze: rosa di Kelaa M'Gouna, fiori d'arancio, cedro, ambra. Nel laboratorio si può comporre un profumo personale da portare a casa.</p></details><div class="meta"><span class="chip tk">Fare biglietto</span></div></div></div>
+      <div class="item"><div><a class="t place" href="https://www.google.com/maps/search/?api=1&query=Le+Jardin+Secret+Marrakech">Le Jardin Secret</a><div class="d">A pochi minuti a piedi.</div><details class="about"><summary>Un po' di storia</summary><p>Un riad-giardino nato nel XVI secolo, ricostruito nell'Ottocento e aperto al pubblico nel 2016. Ha due giardini, uno islamico tradizionale e uno di piante esotiche, alimentati dall'antico sistema di canali sotterranei che portava l'acqua dall'Atlante. Dalla torre si vede tutta la medina.</p></details><div class="meta"><span class="chip tk">~18,50 € in 2</span></div></div></div>
+    </div>
+    <div class="part">
+      <h3>Tramonto e sera</h3>
+      <div class="item timed"><time>17:30</time><div><a class="t place" href="https://www.google.com/maps/search/?api=1&query=Dar+Dar+Marrakech">Dar Dar</a><div class="d">Dalle 17:30 alle 19:30.</div></div></div>
+      <div class="item"><div><div class="t">Cena</div></div></div>
+    </div>
+  </div>
+  <div class="card ideas">
+    <div class="part">
+      <h3>Idee di Gabriella · stessa zona</h3>
+      <div class="item"><div><a class="t place" href="https://www.google.com/maps/search/?api=1&query=Assouline+Marrakech">Assouline</a><div class="d">Libreria d'arte e design, a due passi da Majorelle.</div></div></div>
+      <div class="item"><div><a class="t place" href="https://www.google.com/maps/search/?api=1&query=Le+Jardin+restaurant+Souk+Sidi+Abdelaziz+Marrakech">Le Jardin</a><div class="d">Ristorante in un cortile pieno di piante e alberi, nei souk vicino a Mouassine. Molto fotografato. Buono anche solo per un tè.</div><div class="meta"><span class="chip tk">Meglio prenotare</span></div></div></div>
+      <div class="item"><div><a class="t place" href="https://www.google.com/maps/search/?api=1&query=Kesh+Cup+Marrakech">Kesh Cup</a><div class="d">Micro-caffè specialty, 3 posti al banco. 9:00–21:00.</div><div class="meta"><span class="chip ">Solo contanti</span></div></div></div>
+      <div class="item"><div><a class="t place" href="https://www.google.com/maps/search/?api=1&query=Rue+Mouassine+Marrakech">Passeggiata Rue Mouassine → Rue Amsefah</a><div class="d">Concept store e botteghe di design, tra Jardin Secret e Dar El Bacha.</div></div></div>
+      <div class="item"><div><a class="t place" href="https://www.google.com/maps/search/?api=1&query=Atay+Cafe+Food+Marrakech">Atay Café</a><div class="d">Rooftop economico in Rue Amsefah.</div></div></div>
+      <div class="item"><div><a class="t place" href="https://www.google.com/maps/search/?api=1&query=Les+Jardins+du+Lotus+Marrakech">Les Jardins du Lotus</a><div class="d">Ristorante in giardino con piscina, vicino a Dar El Bacha.</div><div class="meta"><span class="chip tk">Prenotare per cena</span></div></div></div>
+    </div>
+  </div>
+  </div>
+  </details>
+</section>
+
+<!-- GIORNO 3 -->
+<section class="day" id="g3" data-city="rak" data-date="2026-10-05">
+  <details class="daydet">
+  <summary>
+  <div class="dayhead"><div class="num">3</div><div><h2>Marrakech</h2><p>Lunedì 5 ottobre <span class="badge-today">Oggi</span></p></div><span class="chev" aria-hidden="true"></span></div>
+  <div class="sum"><span>3 posti</span><span>1 biglietto sul posto</span><span>1 biglietto da prenotare</span><span>+2 idee</span></div>
+  </summary>
+  <div class="daybody">
+  <div class="card">
+    <div class="part">
+      <h3>Mattina</h3>
+      <div class="item timed"><time>09:00</time><div><a class="t place" href="https://www.google.com/maps/search/?api=1&query=Ben+Youssef+Madrasa+Marrakech">Madrasa Ben Youssef</a><div class="d">Aperta 09:00–19:00, 50 DH. 20 min. Circa 45 min di visita.</div><details class="about"><summary>Un po' di storia</summary><p>Scuola coranica fondata nel XIV secolo e ricostruita dai Saaditi nel 1565. Era la più grande del Nord Africa: nelle sue circa 130 piccole stanze vivevano fino a 900 studenti. Il cortile con la vasca, gli stucchi, il cedro intagliato e gli zellige sono tra i più belli del Marocco. Riaperta nel 2022 dopo il restauro.</p></details><div class="meta"><span class="chip tk">Si paga sul posto · ~9 € in 2</span></div></div></div>
+      <div class="item"><div><a class="t place" href="https://www.google.com/maps/search/?api=1&query=Maison+de+la+Photographie+Marrakech">House of Photography</a><div class="d">3 min.</div><details class="about"><summary>Un po' di storia</summary><p>Un riad con migliaia di fotografie del Marocco dalla fine dell'Ottocento a metà Novecento: volti, villaggi berberi, carovane. Sul tetto c'è una terrazza con caffè e vista sulla medina e sull'Atlante.</p></details><div class="meta"><span class="chip tk">Fare biglietto</span></div></div></div>
+    </div>
+    <div class="part">
+      <h3>Giù per i souk</h3>
+      <div class="item"><div><a class="t place" href="https://www.google.com/maps/search/?api=1&query=Souk+Semmarine+Marrakech">Shopping nei souk</a><div class="d">Da Ben Youssef si scende verso la piazza delle spezie: Souk Semmarine, Souk El Attarine e Cherifia, Souk des Teinturiers, Souk des Épices.</div><details class="about"><summary>Un po' di storia</summary><p>Souk Semmarine è l'arteria principale: tessuti, lanterne, pelle. Al Souk des Teinturiers, quello dei tintori, le matasse di lana colorata sono appese ad asciugare sopra la strada. Alla piazza delle spezie (Rahba Kedima) ci sono erboristerie, cesti e cappelli. Ogni souk prende il nome dal mestiere che ci si faceva.</p></details></div></div>
+    </div>
+    <div class="part">
+      <h3>Pomeriggio</h3>
+      <div class="item"><div><div class="t">Hammam</div><div class="d">Due opzioni segnate:</div><details class="about"><summary>Un po' di storia</summary><p>Il rito classico: prima il vapore, poi il sapone nero all'olio d'oliva (<i>savon beldi</i>), poi lo scrub energico con il guanto <i>kessa</i> e infine l'argilla <i>ghassoul</i>. Per i marocchini è un appuntamento settimanale, non solo un trattamento.</p></details><div class="links"><a href="https://lesbainsdemarrakech.com/it">Les Bains de Marrakech ↗</a><a href="https://www.getyourguide.com/it-it/marrakech-l208/mouassine-il-vero-hammam-tradizionale-marocchino-t494430/">Hammam Mouassine ↗</a></div></div></div>
+    </div>
+  </div>
+  <div class="card ideas">
+    <div class="part">
+      <h3>Idee di Gabriella</h3>
+      <div class="item"><div><a class="t place" href="https://www.google.com/maps/search/?api=1&query=Nomad+Marrakech">Nomad o L'Mida</a><div class="d">Rooftop sulla piazza delle spezie: pranzo alla fine del giro dei souk.</div></div></div>
+      <div class="item"><div><a class="t place" href="https://www.google.com/maps/search/?api=1&query=Riad+Zitoun+el+Jdid+Marrakech">Sera vicino al riad</a><div class="d">Otto, Odette Rooftop, Bidaya o Ksar Kasbah: tutti a 10–20 min a piedi. Vedi «La lista di Gabriella».</div></div></div>
+      <div class="item"><div><div class="t">Da sapere</div><div class="d">Dar Yacout e Dar El Bacha sono chiusi il lunedì.</div></div></div>
+    </div>
+  </div>
+  </div>
+  </details>
+</section>
+
+<!-- GIORNO 4 -->
+<section class="day" id="g4" data-city="rak" data-date="2026-10-06">
+  <details class="daydet">
+  <summary>
+  <div class="dayhead"><div class="num">4</div><div><h2>Marrakech</h2><p>Martedì 6 ottobre <span class="badge-today">Oggi</span></p></div><span class="chev" aria-hidden="true"></span></div>
+  <div class="sum"><span>Gita da decidere</span><span>+3 idee</span></div>
+  </summary>
+  <div class="daybody">
+  <div class="card">
+    <div class="part">
+      <div class="item"><div><a class="t place" href="https://www.google.com/maps/search/?api=1&query=Essaouira">Gita in giornata a Essaouira</a><div class="d">Ancora da decidere.</div><details class="about"><summary>Un po' di storia</summary><p>Città di porto sull'Atlantico, a circa 3 ore di auto. La medina del Settecento, patrimonio UNESCO, è chiusa dai bastioni sul mare (la Skala, dove è stato girato Il Trono di Spade). Si va per il porto con le barche blu dei pescatori, il pesce alla griglia e l'aria fresca. C'è quasi sempre vento.</p></details><div class="meta"><span class="chip q">Da decidere</span></div></div></div>
+    </div>
+  </div>
+  <div class="card ideas">
+    <div class="part">
+      <h3>Idee di Gabriella · se restate a Marrakech</h3>
+      <div class="item"><div><a class="t place" href="https://www.google.com/maps/search/?api=1&query=Lalla+Zehra+cooking+class+Marrakech">Lalla Zehra</a><div class="d">Cooking class in una fattoria a 23 km, di solito con transfer. Tel. +212 626 705082.</div><div class="meta"><span class="chip tk">Prenotazione obbligatoria</span></div></div></div>
+      <div class="item"><div><a class="t place" href="https://www.google.com/maps/search/?api=1&query=Dar+Yacout+Marrakech">Dar Yacout</a><div class="d">Cena in un palazzo, menu fisso con musica e aperitivo sul tetto. Circa 700 MAD a testa con vino.</div><div class="meta"><span class="chip ">€€€€</span><span class="chip tk">Prenotare</span></div></div></div>
+      <div class="item"><div><a class="t place" href="https://www.google.com/maps/search/?api=1&query=Comptoir+Darna+Marrakech">Comptoir Darna</a><div class="d">Cena con spettacolo a Hivernage, in taxi. Lo show inizia verso le 22.</div><div class="meta"><span class="chip tk">Prenotare</span></div></div></div>
+    </div>
+  </div>
+  </div>
+  </details>
+</section>
+
+<!-- GIORNO 5 -->
+<section class="day" id="g5" data-city="fes" data-date="2026-10-07">
+  <details class="daydet">
+  <summary>
+  <div class="dayhead"><div class="num">5</div><div><h2>Marrakech → Fès</h2><p>Mercoledì 7 ottobre <span class="badge-today">Oggi</span></p></div><span class="chev" aria-hidden="true"></span></div>
+  <div class="sum"><span>Volo</span><span>2 posti</span><span>1 biglietto sul posto</span><span>Riad Fes Baraka &amp; Spa</span></div>
+  </summary>
+  <div class="daybody">
+  <div class="card">
+    <div class="part">
+      <h3>Mattina a Marrakech</h3>
+      <div class="item timed"><time>09:00</time><div><a class="t place" href="https://www.google.com/maps/search/?api=1&query=Saadian+Tombs+Marrakech">Tombe Saadiane e Palazzo El Badi</a><div class="d">15 min. Aprono alle 09:00.</div><details class="about"><summary>Un po' di storia</summary><p><b>Tombe Saadiane:</b> necropoli reale del XVI secolo voluta dal sultano Ahmad al-Mansur per sé e per la sua famiglia. Restate murate e nascoste per oltre due secoli, furono riscoperte nel 1917. La Sala delle Dodici Colonne, in marmo di Carrara, è il pezzo forte.<br><b>Palazzo El Badi:</b> sempre di al-Mansur, costruito per celebrare la vittoria sui portoghesi del 1578. Il nome significa «l'incomparabile»: era tra i palazzi più sontuosi del mondo islamico, poi il sultano Moulay Ismail lo smontò per portare i materiali a Meknès. Oggi restano rovine imponenti, giardini incassati e cicogne che nidificano sulle mura.</p></details><div class="meta"><span class="chip tk">Si paga sul posto · ~20 € in 2</span></div></div></div>
+    </div>
+  </div>
+  <div class="card move">
+    <div class="lbl">Spostamento · Volo Ryanair</div>
+    <ul>
+      <li><time>11:30</time><span>Transfer dal riad all'aeroporto</span></li>
+      <li><time>14:10</time><span>Volo Ryanair FR6731 Marrakech → Fès</span></li>
+      <li><time>15:30</time><span>Arrivo a Fès, poi 19 km fino al riad</span></li>
+    </ul>
+  </div>
+  <div class="card hotel">
+    <div class="lbl">Hotel · 2 notti, 7 → 9 ottobre</div>
+    <a class="name place" href="https://www.google.com/maps/search/?api=1&query=Riad+Fes+Baraka+Spa+Fes">Riad Fes Baraka &amp; Spa</a>
+    
+  </div>
+  <div class="card">
+    <div class="part">
+      <h3>Tramonto a Fès</h3>
+      <div class="item"><div><a class="t place" href="https://www.google.com/maps/search/?api=1&query=Merenid+Tombs+Fes">Tombe dei Merinidi</a><div class="d">Vista sulla medina. Taxi e poi una breve salita.</div><details class="about"><summary>Un po' di storia</summary><p>Grandi mausolei reali in rovina della dinastia merinide, che regnò su Fès dal 1248 al 1465, la sua età d'oro. Stanno sulla collina a nord della medina, e da qui al tramonto si vede tutta Fès el-Bali che si accende. In auto sono 10 minuti, a piedi circa 40.</p></details></div></div>
+    </div>
+  </div>
+  </div>
+  </details>
+</section>
+
+<!-- GIORNO 6 -->
+<section class="day" id="g6" data-city="fes" data-date="2026-10-08">
+  <details class="daydet">
+  <summary>
+  <div class="dayhead"><div class="num">6</div><div><h2>Fès</h2><p>Giovedì 8 ottobre <span class="badge-today">Oggi</span></p></div><span class="chev" aria-hidden="true"></span></div>
+  <div class="sum"><span>7 posti</span><span>Guida consigliata</span><span>+1 idea</span></div>
+  </summary>
+  <div class="daybody">
+  <p class="note">Consigliata una guida locale per mezza giornata.</p>
+  <details class="about intro"><summary>La medina di Fès in breve</summary><p><b>La medina di Fès (Fès el-Bali)</b> è una delle più antiche del mondo e la più grande area urbana senza auto. Fondata alla fine dell'VIII secolo e ampliata da Moulay Idriss II nel IX, è patrimonio UNESCO: circa 9.000 vicoli, centinaia di moschee e decine di hammam pubblici. Le due strade principali sono la Talaa Kbira e la Talaa Sghira, la «grande» e la «piccola salita». Secondo la leggenda il nome viene da <i>fas</i>, «piccone», quello d'oro usato per tracciarne i confini.</p></details>
+  <div class="card">
+    <div class="part">
+      <h3>Mattina</h3>
+      <div class="item"><div><a class="t place" href="https://www.google.com/maps/search/?api=1&query=Bab+Bou+Jeloud+Fes">Bab Bou Jeloud</a><div class="d">La Porta Blu, ingresso principale della medina.</div><details class="about"><summary>Un po' di storia</summary><p>La porta più famosa di Fès, costruita nel 1913 durante il protettorato francese. Fuori è rivestita di piastrelle blu, il colore di Fès, dentro di verde, il colore dell'Islam. Dagli archi si vedono già i minareti della medina.</p></details></div></div>
+      <div class="item"><div><a class="t place" href="https://www.google.com/maps/search/?api=1&query=Bou+Inania+Madrasa+Fes">Madrasa Bou Inania</a><details class="about"><summary>Un po' di storia</summary><p>Scuola coranica costruita tra il 1350 e il 1355 dal sultano merinide Abu Inan. È uno dei pochissimi edifici religiosi di Fès aperti ai non musulmani, e uno dei pochi con un proprio minareto. Davanti all'ingresso ci sono i resti di un misterioso orologio ad acqua del Trecento.</p></details></div></div>
+      <div class="item"><div><a class="t place" href="https://www.google.com/maps/search/?api=1&query=Al-Qarawiyyin+Fes">Università Al-Qarawiyyin</a><div class="d">Esterno e cortile.</div><details class="about"><summary>Un po' di storia</summary><p>Fondata nell'859 da Fatima al-Fihri, una donna arrivata da Kairouan. È considerata la più antica università del mondo ancora attiva. La moschea al centro è una delle più grandi d'Africa; l'interno è riservato ai musulmani, ma dalle porte si vedono il cortile e le fontane.</p></details><div class="meta"><span class="chip">Solo esterno</span></div></div></div>
+      <div class="item"><div><a class="t place" href="https://www.google.com/maps/search/?api=1&query=Al-Attarine+Madrasa+Fes">Medersa Al-Attarine</a><details class="about"><summary>Un po' di storia</summary><p>Piccola scuola coranica merinide costruita tra il 1323 e il 1325, chiamata così perché sta accanto al souk degli speziali e dei profumieri (<i>attarin</i>). Molti la considerano la più raffinata di Fès: zellige, stucchi e legno intagliato coprono ogni centimetro.</p></details></div></div>
+    </div>
+    <div class="part">
+      <h3>Concerie</h3>
+      <div class="item"><div><a class="t place" href="https://www.google.com/maps/search/?api=1&query=Chouara+Tannery+Fes">Conceria Chouara</a><div class="d">Sulle terrazze danno le foglie di menta gratis (contro l'odore).</div><details class="about"><summary>Un po' di storia</summary><p>La più grande e antica conceria di Fès, in uso da secoli con gli stessi metodi. Nelle vasche bianche le pelli vengono ammorbidite con calce ed escrementi di piccione, in quelle colorate tinte con pigmenti naturali: papavero per il rosso, indaco, zafferano. Si guarda dalle terrazze dei negozi di pelletteria, che poi provano a farti comprare. La menta serve per l'odore.</p></details></div></div>
+    </div>
+    <div class="part">
+      <h3>Pranzo</h3>
+      <div class="item"><div><div class="t">Pranzo libero</div></div></div>
+    </div>
+    <div class="part">
+      <h3>Pomeriggio</h3>
+      <div class="item"><div><div class="t">Souk artigianali</div><div class="d">Rame, pelle, tessuti.</div><details class="about"><summary>Un po' di storia</summary><p>Ogni strada ha il suo mestiere: ramai, pellettieri, tessitori, venditori di babbucce. Molti laboratori lavorano ancora a vista. Nella medina di Fès non entrano le auto, e le merci viaggiano a dorso d'asino.</p></details></div></div>
+      <div class="item"><div><a class="t place" href="https://www.google.com/maps/search/?api=1&query=Place+Seffarine+Fes">Place Seffarine</a><details class="about"><summary>Un po' di storia</summary><p>La piazza dei ramai: si sente prima di vederla, per il martellare su pentoloni di rame e ottone. Sta tra la Qarawiyyin e le concerie, all'ombra di un grande albero.</p></details></div></div>
+      <div class="item"><div><a class="t place" href="https://www.google.com/maps/search/?api=1&query=Nejjarine+Museum+Fes">Museo Nejjarine</a><div class="d">La fontana e il palazzo.</div><details class="about"><summary>Un po' di storia</summary><p>Museo delle arti del legno in un <i>funduq</i> del Settecento, cioè un antico caravanserraglio dove dormivano mercanti e animali. Davanti c'è la fontana Nejjarine, rivestita di zellige, una delle più belle della città. Sul tetto si beve il tè con vista.</p></details></div></div>
+    </div>
+  </div>
+  <div class="card ideas">
+    <div class="part">
+      <h3>Idea di Gabriella · tramonto</h3>
+      <div class="item"><div><a class="t place" href="https://www.google.com/maps/search/?api=1&query=Palais+de+Fes+Dar+Tazi+Fes">Palais de Fès</a><div class="d">Rooftop "Hanging Gardens" con vista a 360° sulla medina, vicino alla Qarawiyyin. Cena "1001 Nights" al tramonto. Molte scale.</div><div class="meta"><span class="chip tk">Prenotare</span></div></div></div>
+    </div>
+  </div>
+  </div>
+  </details>
+</section>
+
+<!-- GIORNO 7 -->
+<section class="day" id="g7" data-city="chf" data-date="2026-10-09">
+  <details class="daydet">
+  <summary>
+  <div class="dayhead"><div class="num">7</div><div><h2>Fès → Chefchaouen</h2><p>Venerdì 9 ottobre <span class="badge-today">Oggi</span></p></div><span class="chev" aria-hidden="true"></span></div>
+  <div class="sum"><span>Transfer 4 h</span><span>6 posti</span><span>Dar Dadicilef</span></div>
+  </summary>
+  <div class="daybody">
+  <p class="note">Unico pomeriggio a Chefchaouen: meglio partire da Fès subito dopo pranzo, verso le 13:30–14:00, per arrivare prima del tramonto.</p>
+  <div class="card">
+    <div class="part">
+      <h3>Mattina a Fès</h3>
+      <div class="item"><div><a class="t place" href="https://www.google.com/maps/search/?api=1&query=Mellah+Fes">Mellah</a><div class="d">Il quartiere ebraico.</div><details class="about"><summary>Un po' di storia</summary><p>Il quartiere ebraico di Fès, del XV secolo, è il primo mellah del Marocco. Si riconosce dalle case con i balconi in legno affacciati sulla strada, mentre quelle musulmane guardano verso il cortile interno. Da vedere la sinagoga Ibn Danan e il cimitero ebraico.</p></details></div></div>
+      <div class="item"><div><a class="t place" href="https://www.google.com/maps/search/?api=1&query=Royal+Palace+Fes">Palazzo Reale</a><div class="d">Le porte dorate, da fuori.</div><details class="about"><summary>Un po' di storia</summary><p>Il Palazzo Reale di Fès (Dar al-Makhzen) non si visita, ma la facciata sì: sette enormi porte in ottone dorato, circondate da zellige e cedro intagliato, sulla piazza degli Alawiti. È una delle foto più classiche del Marocco.</p></details><div class="meta"><span class="chip">Solo esterno</span></div></div></div>
+      <div class="item"><div><a class="t place" href="https://www.google.com/maps/search/?api=1&query=Ville+Nouvelle+Fes">Ville Nouvelle</a><div class="d">Caffè e atmosfera coloniale.</div><details class="about"><summary>Un po' di storia</summary><p>La città costruita dai francesi durante il protettorato, dal 1916: viali larghi, palazzi coloniali, caffè con i tavolini fuori. È l'altra faccia di Fès, moderna e tranquilla, a pochi minuti dalla medina.</p></details></div></div>
+    </div>
+  </div>
+  <div class="card move">
+    <div class="lbl">Spostamento · Transfer privato</div>
+    <ul>
+      <li><time>4 h</time><span>Pranzo, poi in auto fino a Chefchaouen</span></li>
+    </ul>
+  </div>
+  <div class="card hotel">
+    <div class="lbl">Hotel · 1 notte, 9 → 10 ottobre</div>
+    <a class="name place" href="https://www.google.com/maps/search/?api=1&query=Dar+Dadicilef+Chefchaouen">Dar Dadicilef</a>
+    
+  </div>
+  <div class="card">
+    <div class="part">
+      <h3>Pomeriggio e sera a Chefchaouen</h3>
+      <div class="item"><div><a class="t place" href="https://www.google.com/maps/search/?api=1&query=Chefchaouen+Medina">Passeggiata nella medina</a><div class="d">Il cuore della città.</div><details class="about"><summary>Un po' di storia</summary><p>Chefchaouen fu fondata nel 1471 come fortezza contro i portoghesi e poi accolse musulmani ed ebrei cacciati dalla Spagna. Il nome significa «guarda le corna», per le due cime del Rif che la sovrastano. Sul perché sia tutta blu ci sono più versioni: una tradizione ebraica, un modo per tenere lontane le zanzare, o semplicemente il turismo.</p></details></div></div>
+      <div class="item"><div><a class="t place" href="https://www.google.com/maps/search/?api=1&query=Kasbah+Chefchaouen">Moschea della Kasbah</a><div class="d">Solo da fuori se non si è musulmani.</div><details class="about"><summary>Un po' di storia</summary><p>In piazza Outa el-Hammam ci sono la kasbah rossa del XV secolo, con giardino, piccolo museo e torre panoramica, e accanto la Grande Moschea, con il suo raro minareto ottagonale.</p></details><div class="meta"><span class="chip">Solo esterno</span></div></div></div>
+      <div class="item"><div><div class="t">Vicoli blu e botteghe</div><div class="d">Lana, tappeti, ceramiche. Vicoli famosi: Calle Aladdin, Ras El Ma.</div></div></div>
+    </div>
+    <div class="part">
+      <h3>Tramonto</h3>
+      <div class="item"><div><a class="t place" href="https://www.google.com/maps/search/?api=1&query=Ras+El+Ma+Chefchaouen">Ras El Ma</a><div class="d">Piccolo torrente con vista panoramica.</div><details class="about"><summary>Un po' di storia</summary><p>La sorgente che dà l'acqua alla città, appena fuori dalle mura: qui ci sono ancora i lavatoi dove le donne lavano i panni. Dal ponticello parte il sentiero (20–30 min) per la Moschea Spagnola, il punto classico per vedere il tramonto su tutta Chefchaouen.</p></details></div></div>
+    </div>
+  </div>
+  </div>
+  </details>
+</section>
+
+<!-- GIORNO 8 -->
+<section class="day" id="g8" data-city="chf" data-date="2026-10-10">
+  <details class="daydet">
+  <summary>
+  <div class="dayhead"><div class="num">8</div><div><h2>Rientro a Milano</h2><p>Sabato 10 ottobre <span class="badge-today">Oggi</span></p></div><span class="chev" aria-hidden="true"></span></div>
+  <div class="sum"><span>Transfer + volo</span><span>Partenza 8:00</span><span>Volo 13:00</span></div>
+  </summary>
+  <div class="daybody">
+  <div class="card">
+    <div class="part">
+      <h3>Presto al mattino</h3>
+      <div class="item"><div><div class="t">Ultimo giro nei vicoli blu</div><div class="d">Se vi svegliate presto: all'alba sono vuoti, il momento migliore per le foto.</div><div class="meta"><span class="chip q">Facoltativo</span></div></div></div>
+    </div>
+  </div>
+  <div class="card move">
+    <div class="lbl">Spostamento · Transfer privato + Ryanair</div>
+    <ul>
+      <li><time>8:00</time><span>Partenza da Chefchaouen</span></li>
+      <li><time>2 h</time><span>In auto fino all'aeroporto di Tangeri</span></li>
+      <li><time>13:00</time><span>Volo Tangeri → Bergamo (BGY)</span></li>
+      <li><time>17:45</time><span>Atterraggio a Bergamo, poi bus</span></li>
+    </ul>
+    <p class="note">Check-out e colazione prima delle 8:00. Partendo alle 8 siete in aeroporto verso le 10, tre ore prima del volo.</p>
+  </div>
+  </div>
+  </details>
+</section>
+
+<!-- HOTEL -->
+<section class="block" id="hotel" style="scroll-margin-top:72px">
+  <h2>Hotel</h2>
+  <p>I codici delle prenotazioni sono nella pagina privata su Claude.</p>
+  <div class="card hotel">
+    <div class="lbl">Hotel · 4 notti, 3 → 7 ottobre</div>
+    <a class="name place" href="https://www.google.com/maps/search/?api=1&query=Riad+Alia+Derb+Manchoura+38+Marrakech">Riad Alia</a>
+    <div class="d">Derb Manchoura 38, Mellah, 40000 Marrakech</div>
+    <div class="meta"><span class="chip">Pickup aeroporto col riad</span></div>
+  </div>
+  <div class="card hotel">
+    <div class="lbl">Hotel · 2 notti, 7 → 9 ottobre</div>
+    <a class="name place" href="https://www.google.com/maps/search/?api=1&query=Riad+Fes+Baraka+Spa+Fes">Riad Fes Baraka &amp; Spa</a>
+    
+  </div>
+  <div class="card hotel">
+    <div class="lbl">Hotel · 1 notte, 9 → 10 ottobre</div>
+    <a class="name place" href="https://www.google.com/maps/search/?api=1&query=Dar+Dadicilef+Chefchaouen">Dar Dadicilef</a>
+    
+  </div>
+</section>
+
+<!-- LISTA GABRIELLA -->
+<section class="block" id="gabriella" style="scroll-margin-top:72px">
+  <h2>La lista di Gabriella</h2>
+  <p>Posti presi da Instagram e Pinterest, tutti verificati. Le distanze sono dal Riad Alia. Quelli già nel programma non sono ripetuti qui.</p>
+  <div class="card">
+    <div class="part">
+      <h3>Rooftop e aperitivo</h3>
+      <div class="item"><div><a class="t place" href="https://www.google.com/maps/search/?api=1&query=MO-MO+rooftop+Marrakech">MÖ-MÖ</a><div class="d">Jemaa el-Fna · 15 min a piedi · €€</div><div class="meta"><span class="chip ">Coda, non si prenota</span></div></div></div>
+      <div class="item"><div><a class="t place" href="https://www.google.com/maps/search/?api=1&query=El+Fenn+Marrakech">El Fenn</a><div class="d">Bab Laksour, vicino alla Koutoubia · 25 min · €€€</div><div class="meta"><span class="chip tk">Prenotare</span></div></div></div>
+      <div class="item"><div><a class="t place" href="https://www.google.com/maps/search/?api=1&query=OTTO+Marrakech+Riad+Zitoun">Otto</a><div class="d">Riad Zitoun el Jdid · 5–10 min · €€€ · recensioni miste sul cibo</div><div class="meta"><span class="chip tk">Prenotare per cena</span></div></div></div>
+      <div class="item"><div><a class="t place" href="https://www.google.com/maps/search/?api=1&query=Odette+Rooftop+La+Sultana+Marrakech">Odette Rooftop</a><div class="d">Hotel La Sultana, Kasbah · 15 min · 16:00–23:00 · €€€</div><div class="meta"><span class="chip tk">Prenotare</span></div></div></div>
+      <div class="item"><div><a class="t place" href="https://www.google.com/maps/search/?api=1&query=La+Table+du+Souk+La+Sultana+Marrakech">La Table du Souk</a><div class="d">Hotel La Sultana, Kasbah · 15 min · solo pranzo 12:30–15:00</div><div class="meta"><span class="chip tk">Prenotare</span></div></div></div>
+      <div class="item"><div><a class="t place" href="https://www.google.com/maps/search/?api=1&query=Bidaya+Rooftop+Marrakech">Bidaya Rooftop</a><div class="d">Riad Almaha, Kasbah · 15–20 min · €€€</div><div class="meta"><span class="chip tk">Prenotare per il tramonto</span></div></div></div>
+      <div class="item"><div><a class="t place" href="https://www.google.com/maps/search/?api=1&query=Ksar+Kasbah+Marrakech">Ksar Kasbah</a><div class="d">Riad nella Kasbah · 10–15 min · brunch e cena · €€</div><div class="meta"><span class="chip tk">Prenotare per cena</span></div></div></div>
+      <div class="item"><div><a class="t place" href="https://www.google.com/maps/search/?api=1&query=Nomad+Marrakech">Nomad</a><div class="d">Piazza delle spezie · 20 min · €€</div><div class="meta"><span class="chip tk">Prenotare per il tramonto</span></div></div></div>
+      <div class="item"><div><a class="t place" href="https://www.google.com/maps/search/?api=1&query=L%27Mida+Marrakech">L'Mida</a><div class="d">Piazza delle spezie · 20 min · €€</div><div class="meta"><span class="chip tk">Prenotare per il tramonto</span></div></div></div>
+      <div class="item"><div><a class="t place" href="https://www.google.com/maps/search/?api=1&query=Noujoum+Izza+Marrakech">Noujoum</a><div class="d">Hotel Izza, medina nord · taxi · €€€</div><div class="meta"><span class="chip tk">Prenotare</span></div></div></div>
+      <div class="item"><div><a class="t place" href="https://www.google.com/maps/search/?api=1&query=Nobu+Hotel+Marrakech">Nobu</a><div class="d">Hivernage · taxi 10–15 min · €€€€</div><div class="meta"><span class="chip tk">Prenotare</span></div></div></div>
+    </div>
+    <div class="part">
+      <h3>Ristoranti</h3>
+      <div class="item"><div><a class="t place" href="https://www.google.com/maps/search/?api=1&query=Dar+Yacout+Marrakech">Dar Yacout</a><div class="d">Medina nord · taxi 10 min · cena con musica · €€€€ · chiuso il lunedì</div><div class="meta"><span class="chip tk">Prenotare</span></div></div></div>
+      <div class="item"><div><a class="t place" href="https://www.google.com/maps/search/?api=1&query=Comptoir+Darna+Marrakech">Comptoir Darna</a><div class="d">Hivernage · taxi · cena con spettacolo · €€€</div><div class="meta"><span class="chip tk">Prenotare</span></div></div></div>
+      <div class="item"><div><a class="t place" href="https://www.google.com/maps/search/?api=1&query=Le+Jardin+restaurant+Souk+Sidi+Abdelaziz+Marrakech">Le Jardin</a><div class="d">Souk Sidi Abdelaziz, Mouassine · cortile verde nei souk · €€</div><div class="meta"><span class="chip tk">Meglio prenotare</span></div></div></div>
+      <div class="item"><div><a class="t place" href="https://www.google.com/maps/search/?api=1&query=Les+Jardins+du+Lotus+Marrakech">Les Jardins du Lotus</a><div class="d">Mouassine · giardino con piscina · €€€</div><div class="meta"><span class="chip tk">Prenotare per cena</span></div></div></div>
+      <div class="item"><div><a class="t place" href="https://www.google.com/maps/search/?api=1&query=La+Famille+Marrakech">La Famille</a><div class="d">Vicino a Bahia · 10 min · vegetariano in giardino · solo pranzo</div><div class="meta"><span class="chip tk">Prenotare</span></div></div></div>
+      <div class="item"><div><a class="t place" href="https://www.google.com/maps/search/?api=1&query=Mandala+Society+Marrakech">Mandala Society</a><div class="d">Riad Zitoun el Jdid · 10 min · healthy, con rooftop · €€</div></div></div>
+      <div class="item"><div><a class="t place" href="https://www.google.com/maps/search/?api=1&query=Atay+Cafe+Food+Marrakech">Atay Café</a><div class="d">Rue Amsefah · 30 min · rooftop economico · €</div></div></div>
+    </div>
+    <div class="part">
+      <h3>Caffè ed esperienze</h3>
+      <div class="item"><div><a class="t place" href="https://www.google.com/maps/search/?api=1&query=Kesh+Cup+Marrakech">Kesh Cup</a><div class="d">Rue Sidi Abdelaziz · micro-caffè specialty</div><div class="meta"><span class="chip ">Solo contanti</span></div></div></div>
+      <div class="item"><div><a class="t place" href="https://www.google.com/maps/search/?api=1&query=Lalla+Zehra+cooking+class+Marrakech">Lalla Zehra</a><div class="d">Cooking class in fattoria, 23 km · tel. +212 626 705082</div><div class="meta"><span class="chip tk">Prenotazione obbligatoria</span></div></div></div>
+    </div>
+    <div class="part">
+      <h3>Shopping</h3>
+      <div class="item"><div><a class="t place" href="https://www.google.com/maps/search/?api=1&query=Rue+Mouassine+Marrakech">Rue Mouassine → Rue Amsefah</a><div class="d">Concept store e design, mezza giornata a piedi</div></div></div>
+      <div class="item"><div><a class="t place" href="https://www.google.com/maps/search/?api=1&query=Assouline+Marrakech">Assouline</a><div class="d">Gueliz, vicino a Majorelle · libri d'arte</div></div></div>
+      <div class="item"><div><a class="t place" href="https://www.google.com/maps/search/?api=1&query=La+Maison+des+Babouches+Marrakech">La Maison des Babouches</a><div class="d">Babouche fatte a mano · 9–20 · tel. +212 678 091530</div><div class="meta"><span class="chip q">Posizione da chiedere</span></div></div></div>
+      <div class="item"><div><a class="t place" href="https://www.google.com/maps/search/?api=1&query=Different+Concept+Store+Marrakech">Different Concept</a><div class="d">Concept store di moda e casa</div><div class="meta"><span class="chip q">Posizione da chiedere</span></div></div></div>
+    </div>
+    <div class="part">
+      <h3>Spa di lusso</h3>
+      <div class="item"><div><a class="t place" href="https://www.google.com/maps/search/?api=1&query=La+Mamounia+Spa+Marrakech">Spa La Mamounia</a><div class="d">Bab Jdid · per chi non è ospite solo su disponibilità · da 2.000 MAD</div><div class="meta"><span class="chip tk">Prenotare settimane prima</span></div></div></div>
+      <div class="item"><div><a class="t place" href="https://www.google.com/maps/search/?api=1&query=Royal+Mansour+Spa+Marrakech">Spa Royal Mansour</a><div class="d">Bab Jdid · per chi non è ospite solo trattamenti, senza piscina</div><div class="meta"><span class="chip tk">Prenotare settimane prima</span></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- RISTORANTI -->
+<section class="block" id="ristoranti" style="scroll-margin-top:72px">
+  <h2>Ristoranti segnati</h2>
+  <p>Dalla tua lista, senza città indicata.</p>
+  <div class="card">
+    <div class="part">
+      <div class="item"><div><a class="t place" href="https://www.google.com/maps/search/?api=1&query=Ishq+restaurant+Marrakech">Ishq</a></div></div>
+      <div class="item"><div><a class="t place" href="https://www.google.com/maps/search/?api=1&query=La+Cave+restaurant+Marrakech">La Cave</a></div></div>
+      <div class="item"><div><a class="t place" href="https://www.google.com/maps/search/?api=1&query=Zohra+restaurant+Marrakech">Zohra</a></div></div>
+      <div class="item"><div><a class="t place" href="https://www.google.com/maps/search/?api=1&query=Gayza+Marrakech">Gayza</a></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- BIGLIETTI -->
+<section class="block" id="biglietti" style="scroll-margin-top:72px">
+  <h2>Biglietti da fare</h2>
+  <p>Spunta quando li hai presi. Resta salvato su questo telefono. El Bahia, Ben Youssef, Dar El Bacha e Tombe Saadiane si pagano sul posto.</p>
+  <div class="card">
+    <label class="check"><input type="checkbox" id="tk-esim"><div><div class="t">Attivare l'eSIM</div><div class="d">Prima di partire · ~31,70 € a testa</div></div></label>
+    <label class="check"><input type="checkbox" id="tk-majorelle"><div><div class="t">Jardin Majorelle e Museo YSL</div><div class="d">Dom 4 · ore 11:30 · 660 MAD in 2</div></div></label>
+    <label class="check"><input type="checkbox" id="tk-secret"><div><div class="t">Le Jardin Secret</div><div class="d">Dom 4 · ~18,50 € in 2</div></div></label>
+    <label class="check"><input type="checkbox" id="tk-photo"><div><div class="t">House of Photography</div><div class="d">Lun 5</div></div></label>
+        <label class="check"><input type="checkbox" id="tk-parfum"><div><div class="t">Musée du Parfum</div><div class="d">Dom 4</div></div></label>
+    <label class="check"><input type="checkbox" id="tk-essaouira"><div><div class="t">Decidere la gita a Essaouira</div><div class="d">Mar 6</div></div></label>
+    <label class="check"><input type="checkbox" id="tk-hammam"><div><div class="t">Prenotare l'hammam</div><div class="d">Lun 5 · Les Bains o Mouassine</div></div></label>
+    <label class="check"><input type="checkbox" id="tk-yacout"><div><div class="t">Dar Yacout o Lalla Zehra?</div><div class="d">Mar 6 · solo se restate a Marrakech, vanno prenotati</div></div></label>
+    <label class="check"><input type="checkbox" id="tk-palaisfes"><div><div class="t">Prenotare il Palais de Fès</div><div class="d">Gio 8 · tramonto</div></div></label>
+    <label class="check"><input type="checkbox" id="tk-guida"><div><div class="t">Prenotare la guida a Fès</div><div class="d">Gio 8 · mezza giornata</div></div></label>
+  </div>
+</section>
+
+<!-- SOLDI -->
+<section class="block" id="soldi" style="scroll-margin-top:72px">
+  <h2>Soldi</h2>
+  <p>La moneta è il dirham (MAD). Cambio preso dal tuo biglietto Majorelle: 660 MAD = 61 €.</p>
+  <div class="card conv">
+    <div class="row">
+      <label for="cv-mad">Dirham<input id="cv-mad" type="text" inputmode="decimal" value="100" autocomplete="off"></label>
+      <label for="cv-eur">Euro<input id="cv-eur" type="text" inputmode="decimal" value="9,26" autocomplete="off"></label>
+    </div>
+    <div class="rate"><span>1 € =</span><input id="cv-rate" type="text" inputmode="decimal" value="10,8" aria-label="Cambio dirham per euro" autocomplete="off"><span>MAD · puoi cambiarlo</span></div>
+  </div>
+  <div class="card tbox">
+    <table class="t">
+      <tr><td>10 MAD</td><td>0,93 €</td></tr>
+      <tr><td>20 MAD</td><td>1,85 €</td></tr>
+      <tr><td>50 MAD</td><td>4,63 €</td></tr>
+      <tr><td>100 MAD</td><td>9,26 €</td></tr>
+      <tr><td>200 MAD</td><td>18,52 €</td></tr>
+      <tr><td>500 MAD</td><td>46,30 €</td></tr>
+    </table>
+  </div>
+  <div class="card">
+    <ul class="tips">
+      <li><b>Il dirham si cambia solo in Marocco</b><span>Si preleva al bancomat o si cambia lì. Spendi o cambia quello che avanza prima dei controlli in aeroporto: fuori dal Marocco non lo cambia nessuno.</span></li>
+      <li><b>Porta anche una Visa o Mastercard</b><span>L'American Express è accettata in pochi posti. Per taxi, souk, mance e biglietti sul posto servono contanti.</span></li>
+      <li><b>Mance</b><span>Al ristorante circa il 10%. Per chi porta i bagagli o fa un piccolo servizio, 10–20 MAD.</span></li>
+    </ul>
+  </div>
+  <div class="card tbox">
+    <table class="t">
+      <tr><td>Hotel (3 riad, 7 notti)</td><td>421,44 €</td></tr>
+      <tr><td>Voli, valigia compresa</td><td>502,49 €</td></tr>
+      <tr><td>Transfer aeroporto ↔ riad Marrakech</td><td>30,00 €</td></tr>
+      <tr><td>Transfer Fès → Chefchaouen</td><td>111,00 €</td></tr>
+      <tr><td>Taxi per l'aeroporto di Tangeri</td><td>66,00 €</td></tr>
+      <tr><td>Attività</td><td>200,00 €</td></tr>
+      <tr><td>eSIM</td><td>63,40 €</td></tr>
+      <tr><td>Bus da Bergamo</td><td>36,00 €</td></tr>
+      <tr><td>Pasti <span class="sub">50 € a testa al giorno × 7</span></td><td>700,00 €</td></tr>
+      <tr class="tot"><td>Totale in 2</td><td>2.130,33 €</td></tr>
+      <tr><td class="sub">A testa</td><td class="sub">1.065,17 €</td></tr>
+    </table>
+    <p class="note" style="margin:0 0 6px">Dal tuo foglio budget. Biglietti da pagare sul posto: circa 66 € in 2 (El Bahia, Ben Youssef, Dar El Bacha, Tombe Saadiane).</p>
+  </div>
+</section>
+
+<!-- CONSIGLI -->
+<section class="block" id="consigli" style="scroll-margin-top:72px">
+  <h2>Consigli</h2>
+  <div class="card">
+    <ul class="tips">
+    <li><b>Venerdì 9 a Fès</b><span>Il venerdì a mezzogiorno è la preghiera principale: molte botteghe della medina chiudono per qualche ora.</span></li>
+    <li><b>Petit taxi in città</b><span>Massimo 3 persone. Chiedi il tassametro («compteur») o fissa il prezzo prima di salire.</span></li>
+    <li><b>Finte guide a Fès</b><span>In medina ti avvicinano offrendosi di accompagnarti o dicendo che la strada è chiusa. Rispondi «la shukran» e prosegui. Le guide ufficiali hanno il tesserino.</span></li>
+    <li><b>Jemaa el-Fna</b><span>Henné messo sulla mano senza chiedere, foto con scimmie o serpenti: poi chiedono soldi. Se non ti interessa, rifiuta subito.</span></li>
+    <li><b>Nei souk si tratta</b><span>È normale e fa parte del gioco. Decidi prima quanto vuoi spendere e resta tranquillo.</span></li>
+    <li><b>Vestiti</b><span>Spalle e ginocchia coperte in medina e vicino alle moschee. A Chefchaouen, in montagna, la sera fa fresco: porta una felpa.</span></li>
+    <li><b>Foto alle persone</b><span>Chiedi sempre prima. Ai venditori nei souk spesso dà fastidio.</span></li>
+    <li><b>Acqua</b><span>Solo in bottiglia, anche per lavarsi i denti se hai lo stomaco delicato. Attenzione al ghiaccio nei posti di strada.</span></li>
+    <li><b>Documenti</b><span>Serve il passaporto, la carta d'identità non basta. Tienilo sempre con te: lo chiedono gli hotel.</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- PAROLE -->
+<section class="block" id="parole" style="scroll-margin-top:72px">
+  <h2>Parole utili</h2>
+  <p>Si parla darija (arabo marocchino). Il francese lo capiscono quasi tutti.</p>
+  <div class="card">
+    <dl class="ph">
+      <dt class="grp">Darija</dt>
+      <dt>Salam aleikum</dt><dd>Ciao, buongiorno</dd>
+      <dt>Shukran</dt><dd>Grazie</dd>
+      <dt>La shukran</dt><dd>No grazie: la frase più utile nei souk</dd>
+      <dt>Bshhal?</dt><dd>Quanto costa?</dd>
+      <dt>Ghali bezzaf</dt><dd>Troppo caro</dd>
+      <dt>Waha</dt><dd>Va bene, ok</dd>
+      <dt>Smeh liya</dt><dd>Scusa, permesso</dd>
+      <dt>Inshallah</dt><dd>Se Dio vuole: lo sentirai spesso</dd>
+      <dt class="grp">Francese</dt>
+      <dt>Combien ?</dt><dd>Quanto?</dd>
+      <dt>C'est trop cher</dt><dd>È troppo caro</dd>
+      <dt>L'addition, s'il vous plaît</dt><dd>Il conto, per favore</dd>
+      <dt>Où est… ?</dt><dd>Dov'è…?</dd>
+    </dl>
+  </div>
+</section>
+
+<!-- SOS -->
+<section class="block" id="sos" style="scroll-margin-top:72px">
+  <h2>Emergenze</h2>
+  <p>Numeri del Marocco, gratuiti anche dal cellulare.</p>
+  <div class="card">
+    <div class="sosrow"><div><div class="t"><b>Ambulanza e vigili del fuoco</b></div></div><a class="n" href="tel:15">15</a></div>
+    <div class="sosrow"><div><div class="t"><b>Polizia</b></div><div class="d" style="color:var(--muted);font-size:14px">In città</div></div><a class="n" href="tel:19">19</a></div>
+    <div class="sosrow"><div><div class="t"><b>Gendarmeria</b></div><div class="d" style="color:var(--muted);font-size:14px">Fuori città e in strada</div></div><a class="n" href="tel:177">177</a></div>
+  </div>
+
+  <div class="card">
+    <div class="ins">
+      <div class="eyebrow">Assicurazione viaggio</div>
+      <dl>
+        <dt>Carta</dt><dd>Amex Platino</dd>
+        <dt>Assicuratore</dt><dd>Europ Assistance</dd>
+        <dt>Copertura</dt><dd>3 – 11 ottobre 2026</dd>
+        
+        <dt>Spese mediche</dt><dd>fino a 5.000.000 €</dd>
+        <dt>Rimpatrio</dt><dd>100% del costo</dd>
+      </dl>
+      <div class="warn">Per un problema medico chiama PRIMA l'assistenza: ti indicano dove andare e spesso pagano loro. Il numero è nell'app Amex.</div>
+      <div style="font-size:14px;color:var(--muted)">Certificato PDF salvato sul telefono · <a href="https://amex.eclaims.europ-assistance.com/">amex.eclaims.europ-assistance.com</a></div>
+    </div>
+  </div>
+</section>
+
+<footer>Dai file Excel dell'itinerario (programma corretto: rientro sabato 10) · i minuti indicano il tempo dal punto precedente.</footer>
+</div>
+
+<script id="page-script">
+(function(){
+  var d=new Date(), pad=function(n){return n<10?'0'+n:''+n};
+  var today=d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate());
+  var start=new Date(2026,9,3), t0=new Date(d.getFullYear(),d.getMonth(),d.getDate());
+  var diff=Math.round((start-t0)/864e5), s=document.getElementById('status');
+  if(diff===1) s.textContent='Si parte domani';
+  else if(diff>1) s.textContent='Si parte tra '+diff+' giorni';
+  var sec=document.querySelector('section.day[data-date="'+today+'"]');
+  if(sec){
+    sec.classList.add('is-today');
+    var pill=document.querySelector('nav.days a[data-date="'+today+'"]');
+    if(pill){pill.classList.add('today');pill.scrollIntoView({inline:'center',block:'nearest'});}
+    s.textContent='Oggi: giorno '+sec.querySelector('.num').textContent;
+    if(!location.hash) setTimeout(function(){sec.scrollIntoView();},50);
+  }
+  document.querySelectorAll('.check input').forEach(function(c){
+    try{ if(localStorage.getItem(c.id)==='1') c.checked=true; }catch(e){}
+    c.addEventListener('change',function(){ try{ localStorage.setItem(c.id,c.checked?'1':'0'); }catch(e){} });
+  });
+  (function(){
+    var m=document.getElementById('cv-mad'), e=document.getElementById('cv-eur'), r=document.getElementById('cv-rate');
+    if(!m||!e||!r) return;
+    var num=function(v){ v=(''+v).replace(/\s/g,'').replace(',','.'); var n=parseFloat(v); return isNaN(n)?null:n; };
+    var fmt=function(n){ return (Math.round(n*100)/100).toFixed(2).replace('.',','); };
+    try{ var sr=localStorage.getItem('cv-rate'); if(sr) r.value=sr; }catch(x){}
+    function fromMad(){ var a=num(m.value), k=num(r.value); e.value=(a===null||!k)?'':fmt(a/k); }
+    function fromEur(){ var a=num(e.value), k=num(r.value); m.value=(a===null||!k)?'':fmt(a*k).replace(/,00$/,''); }
+    m.addEventListener('input',fromMad); e.addEventListener('input',fromEur);
+    r.addEventListener('input',function(){ try{ localStorage.setItem('cv-rate',r.value); }catch(x){} fromMad(); });
+    [m,e,r].forEach(function(i){ i.addEventListener('focus',function(){ i.select(); }); });
+    fromMad();
+  })();
+  (function(){
+    var dets=[].slice.call(document.querySelectorAll('details.daydet'));
+    function openId(id){ var sec=document.getElementById(id); if(sec){ var d=sec.querySelector('details.daydet'); if(d) d.open=true; } }
+    var t=document.querySelector('section.day.is-today'); if(t) openId(t.id);
+    if(location.hash) openId(location.hash.slice(1));
+    document.querySelectorAll('nav.days a[href^="#g"]').forEach(function(a){ a.addEventListener('click',function(){ openId(a.getAttribute('href').slice(1)); }); });
+    var b=document.getElementById('toggle-all'); if(!b) return;
+    b.hidden=false;
+    function label(){ b.textContent = dets.every(function(d){return d.open;}) ? 'Chiudi tutti' : 'Apri tutti'; }
+    b.addEventListener('click',function(){ var all=dets.every(function(d){return d.open;}); dets.forEach(function(d){ d.open=!all; }); label(); });
+    dets.forEach(function(d){ d.addEventListener('toggle',label); });
+    label();
+  })();
+})();
+</script>
+
+<script>if("serviceWorker" in navigator){navigator.serviceWorker.register("sw.js").catch(function(){});}</script>
+</html>
